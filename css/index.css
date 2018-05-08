@@ -1,0 +1,53 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+/*如果有sass兼职是完美*/
+button,input{
+    outline: none;
+}
+
+.menu-aside{
+    flex: 8.5 0 auto;
+    margin: 0px;
+    padding: 0px;
+    background: #efefef;
+    display: flex;
+    flex-flow: column;
+}
+.menu{
+    flex: 1.5 0 auto;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 10px;
+    background: #efefef;
+}
+.header{
+    flex: 0.5 0 auto;
+    background: rgb(3, 169, 244);
+    padding-left: 20px;
+    align-items:center;/*垂直y子元素是行内元素*/
+    display: flex;
+}
+.section{
+    flex: 9 0 auto;
+    display: flex;
+    flex-flow: row;
+}
+.aside{
+    flex: 10 0 auto;
+    background: #efefef;
+}
+.footer{
+    flex: 0.5 0 auto;
+    justify-content:center;/*x轴对齐方式*/
+    align-items:center;/*垂直y子元素是行内元素*/
+    display: flex;
+    color: #fff;
+    background: #000;
+}
