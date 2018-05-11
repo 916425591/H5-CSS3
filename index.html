@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="js/jquery-3.1.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>My H5</title>
 </head>
 <body>
@@ -22,10 +22,14 @@
 
 </body>
 <script>
-    var obj={
+
+    let objs={
         name:'myApp',
-        id:1
+        id:2
     }
-    console.log(obj,this.obj,this)
+    let {name,id} =objs
+    if((objs instanceof Object)) {
+        console.log(name)
+    }
 </script>
 </html>
