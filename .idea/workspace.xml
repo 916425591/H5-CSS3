@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7117c569-5c86-4f03-9aa6-073769f100db" name="默认的" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/conver.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/TweenMax.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/three.min.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/conver.html" afterPath="$PROJECT_DIR$/canvas.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,21 +37,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conver.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conver.html">
+      <file leaf-file-name="canvas.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/canvas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="115" column="25" lean-forward="false" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="416">
+              <caret line="346" column="18" lean-forward="true" selection-start-line="346" selection-start-column="18" selection-end-line="346" selection-end-column="18" />
+              <folding>
+                <element signature="e#1071#2247#0" expanded="false" />
+                <element signature="e#2283#3650#0" expanded="false" />
+                <element signature="e#3665#4395#0" expanded="false" />
+                <element signature="e#4424#4650#0" expanded="false" />
+                <element signature="e#4684#4854#0" expanded="false" />
+                <element signature="e#4907#5412#0" expanded="false" />
+                <element signature="e#5498#5746#0" expanded="false" />
+                <element signature="e#5792#6020#0" expanded="false" />
+                <element signature="e#6054#6260#0" expanded="false" />
+                <element signature="e#7036#7925#0" expanded="false" />
+                <element signature="e#7076#7748#0" expanded="false" />
+                <element signature="e#8137#9947#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="three.min.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="three.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/three.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="10103" column="35" lean-forward="true" selection-start-line="10103" selection-start-column="35" selection-end-line="10103" selection-end-column="35" />
+            <state relative-caret-position="1171">
+              <caret line="10104" column="34" lean-forward="true" selection-start-line="10104" selection-start-column="34" selection-end-line="10104" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -63,11 +73,9 @@
       <file leaf-file-name="TweenMax.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/TweenMax.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="7599" lean-forward="false" selection-start-line="16" selection-start-column="7599" selection-end-line="16" selection-end-column="7599" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="175">
+              <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,8 +95,11 @@
     <findStrings>
       <find>jq22</find>
       <find>www</find>
-      <find>http</find>
       <find>location</find>
+      <find>http</find>
+      <find>w</find>
+      <find>anim</find>
+      <find>canvas</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,6 +114,7 @@
         <option value="$PROJECT_DIR$/js/TweenMax.min.js" />
         <option value="$PROJECT_DIR$/conver.html" />
         <option value="$PROJECT_DIR$/js/three.min.js" />
+        <option value="$PROJECT_DIR$/canvas.html" />
       </list>
     </option>
   </component>
@@ -136,8 +148,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -154,6 +164,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -198,6 +210,7 @@
       <workItem from="1525680445735" duration="3733000" />
       <workItem from="1525742492554" duration="5636000" />
       <workItem from="1526034864188" duration="715000" />
+      <workItem from="1526260364016" duration="2681000" />
     </task>
     <task id="LOCAL-00001" summary="初始化布局">
       <created>1525750447738</created>
@@ -217,7 +230,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10084000" />
+    <option name="totallyTimeSpent" value="12765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -260,6 +273,59 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2875">
+          <caret line="115" column="25" lean-forward="false" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="25" />
+          <folding>
+            <element signature="e#1071#2247#0" expanded="false" />
+            <element signature="e#2283#3650#0" expanded="false" />
+            <element signature="e#3665#4395#0" expanded="false" />
+            <element signature="e#4424#4650#0" expanded="false" />
+            <element signature="e#4684#4854#0" expanded="false" />
+            <element signature="e#4907#5412#0" expanded="false" />
+            <element signature="e#5498#5746#0" expanded="false" />
+            <element signature="e#5792#6020#0" expanded="false" />
+            <element signature="e#6054#6260#0" expanded="false" />
+            <element signature="e#7036#7925#0" expanded="false" />
+            <element signature="e#7076#7748#0" expanded="false" />
+            <element signature="e#8137#9947#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/TweenMax.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2975">
+          <caret line="16" column="7599" lean-forward="false" selection-start-line="16" selection-start-column="7599" selection-end-line="16" selection-end-column="7599" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/three.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252575">
+          <caret line="10103" column="35" lean-forward="true" selection-start-line="10103" selection-start-column="35" selection-end-line="10103" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -317,29 +383,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/TweenMax.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="7599" lean-forward="false" selection-start-line="16" selection-start-column="7599" selection-end-line="16" selection-end-column="7599" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conver.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="115" column="25" lean-forward="false" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/three.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="10103" column="35" lean-forward="true" selection-start-line="10103" selection-start-column="35" selection-end-line="10103" selection-end-column="35" />
+        <state relative-caret-position="1171">
+          <caret line="10104" column="34" lean-forward="true" selection-start-line="10104" selection-start-column="34" selection-end-line="10104" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/TweenMax.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="346" column="18" lean-forward="true" selection-start-line="346" selection-start-column="18" selection-end-line="346" selection-end-column="18" />
+          <folding>
+            <element signature="e#1071#2247#0" expanded="false" />
+            <element signature="e#2283#3650#0" expanded="false" />
+            <element signature="e#3665#4395#0" expanded="false" />
+            <element signature="e#4424#4650#0" expanded="false" />
+            <element signature="e#4684#4854#0" expanded="false" />
+            <element signature="e#4907#5412#0" expanded="false" />
+            <element signature="e#5498#5746#0" expanded="false" />
+            <element signature="e#5792#6020#0" expanded="false" />
+            <element signature="e#6054#6260#0" expanded="false" />
+            <element signature="e#7036#7925#0" expanded="false" />
+            <element signature="e#7076#7748#0" expanded="false" />
+            <element signature="e#8137#9947#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
