@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <title>Canvas昼夜</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        #move_div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: linear-gradient(to bottom,#153686 0%,#000 100%);
+            /*background: url("../images/yun.jpg");*/
+            /*background-color:#000;*/
+        }
+        #move_div > canvas {
+            position: absolute;
+            width: 1920px;
+            height: 100%;
+            left: 50%;
+            margin-left: -960px;
+        }
+        body{
+            margin: 0px;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            padding: 0px;
+        }
+        .faloating{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .faloating button{
+            float: left;
+            border-radius:4px ;
+            background: #1c7430;
+            width: 96px;
+            height: 30px;
+            margin-right: 5px;
+            border: none;
+            color: #fff;
+        }
+        .faloating button:hover{
+            background: #20d248;
+            box-shadow: 0px 0px 10px #20d248;
+            cursor: pointer;
+        }
+        .night {
+            animation:night 5s ;
+            -webkit-animation:night 5s ; /*Safari and Chrome*/
+        }
+        @keyframes night
+        {
+            from {background:linear-gradient(to bottom,#153686 0%,#000 100%);}
+            to {background:url("../images/timg.png");}
+        }
+
+        @-webkit-keyframes night /*Safari and Chrome*/
+        {
+            from {background:linear-gradient(to bottom,#153686 0%,#000 100%)}
+            to {background:url("../images/timg.png");}
+        }
+
+        .daytime {
+            animation:night 5s ;
+            -webkit-animation:night 5s ; /*Safari and Chrome*/
+        }
+        @keyframes daytime
+        {
+            from {background:url("../images/timg.png");;}
+            to {background:url("../images/yun.jpg");}
+        }
+
+        @-webkit-keyframes daytime /*Safari and Chrome*/
+        {
+            from {background:url("../images/timg.png");}
+            to {background:url("../images/yun.jpg");}
+        }
+    </style>
+</head>
+
+<body>
+    <div  id="move_div" onmousedown="down()" onmouseup="up()" onmousemove="move()">
+        <canvas id="starCanvas" width="1920" height="1000"></canvas>
+    </div>
+    <div class="faloating">
+        <button onclick="render(0)">上午</button>
+        <button onclick="render(1)">中午</button>
+        <button onclick="render(2)">下午</button>
+        <button onclick="render(3)">傍晚</button>
+        <button onclick="render(4)">晚上</button>
+    </div>
+<script>
+    // 星星效果
+
+
+        var canvas = document.querySelector("#starCanvas");
+        var context = canvas.getContext("2d");
+        var canvasControl = true;//管理开关
+        var backControl = 800;//管理开关
+        var stars = {},
+            particleIndex = 0,
+            settings = {
+                r: 2400,                // 根据是设计稿确定的轨迹半径
+                height: 0,            // 露出的圆弧的高度
+                density: 30,
+                maxLife: 1,
+                groundLevel: canvas.height,
+                leftWall: 0,
+                rightWall: canvas.width,
+                alpha: 0.0,
+                maxAlpha: 1
+            };
+
+        var getMinRandom = function() {
+            var rand = Math.random();
+            // step的大小决定了星星靠近地球的聚拢程度，
+            // step = Math.ceil(2 / (1 - rand))就聚拢很明显
+            //var step = Math.ceil(1 / (1 - rand));
+            var step = 1;
+            var arr = [];
+            for (var i=0; i<step; i++) {
+                arr.push(Math.random());
+            }
+
+            return Math.min.apply(null, arr);
+        };
+
+        function resizeCanvas() {
+            canvas.width = 1920;
+            canvas.height = 800;
+
+            redraw();
+        }
+
+        resizeCanvas();
+
+        window.addEventListener('resize', resizeCanvas);
+
+        function redraw() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.fillStyle = "rgba(0,0,0,0)";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function Star() {
+            // 圆的轨迹方程式为：(x-a)²+(y-b)²=r²
+            // 因此，已知x, 则y = Math.sqrt(r² - (x-a)²) + b;
+            // 其中，圆心是(a, b)
+            // 在本例子中
+            // 圆心坐标是(canvas.width/2, canvas.height - 600 + r);
+            var a = canvas.width/2, b = canvas.height - settings.height + settings.r;
+            // 因此，已知横坐标随机
+            this.x = Math.floor(Math.random() * canvas.width);
+            // 纵坐标需要在圆弧以上
+            // 越往上，越稀疏
+            this.offsety = getMinRandom() * (canvas.height - settings.height);
+            this.y = b - Math.sqrt(settings.r * settings.r - (this.x - a) * (this.x - a)) - this.offsety;
+
+            this.vx = Math.random() * 0.05 + 0.025;    // 水平偏移，也是移动速度
+
+            // 星星的尺寸
+            this.particleSize = 0.5 + (Math.random() + 0.1 / 4);
+            particleIndex++;
+            stars[particleIndex] = this;
+            this.alpha = 0.0;
+            this.maxAlpha = 0.2 + (this.y/canvas.height) * Math.random() * 0.8;
+            this.alphaAction = 1;
+        }
+
+        Star.prototype.draw = function() {
+            // 横坐标移动
+            this.x += this.vx;
+            // 根据切线方向进行偏移
+            // y坐标
+            this.y = canvas.height - settings.height + settings.r - Math.sqrt(settings.r * settings.r - (this.x - canvas.width/2) * (this.x - canvas.width/2)) - this.offsety;
+
+            // 透明度慢慢起来
+            if (this.alphaAction == 1) {
+                if (this.alpha < this.maxAlpha ) {
+                    this.alpha += 0.005;
+                } else {
+                    this.alphaAction = -1;
+                }
+            } else {
+                if (this.alpha > 0.2 ) {
+                    this.alpha -= 0.002;
+                } else {
+                    this.alphaAction = 1;
+                }
+            }
+
+            if ( this.x + (this.particleSize*2) >= settings.rightWall ) {
+                // x到左侧
+                this.x = this.x - settings.rightWall;
+            }
+
+            // 绘制星星
+            context.beginPath();
+            context.fillStyle="rgba(255,255,255," + this.alpha.toString() + ")";
+            context.arc(this.x, this.y, this.particleSize, 0, Math.PI*2, true);
+            context.closePath();
+            context.fill();
+        }
+
+        function render(str) {
+            if (str === 0|| str === 1|| str === 2 || str === 3){//白天
+                if(str === 0){
+                    $("#move_div").css({ 'background':'url("../images/yun1.jpg") '});
+                }else if(str === 1){
+                    $("#move_div").css({ 'background':'url("../images/timg.png") '});
+                }else if(str === 2){
+                    $("#move_div").css({ 'background':'url("../images/timg.png") '});
+                }else if(str === 3){
+                    $("#move_div").css({ 'background':'url("../images/dusk.jpg") '});
+                }
+                $("#move_div").css({
+                    backgroundPosition:'0px 0px'
+                });
+                new_ndx=0;
+                new_ndy=0;
+                $("#starCanvas").hide();
+                canvasControl = false;
+            }else if(typeof(str) == "number" || str===4){//白天
+                if(str===4){
+                    canvasControl =true;
+                    $("#move_div").css({ 'background':'linear-gradient(to bottom,#153686 0%,#000 100%) '});
+                }
+                if(canvasControl){
+                    $("#starCanvas").show();
+                    redraw();
+                    // 星星的数目
+                    // IE下CUP性能有限，数目小
+                    var length = 400;
+                    if (!history.pushState) {
+                        // IE9
+                        length = 200;
+                    } else if (document.msHidden != undefined) {
+                        // IE10+
+                        length = 300;
+                    }
+                    if ( Object.keys(stars).length > length ) {
+                        settings.density = 0;
+                    }
+                    for ( var i = 0; i < settings.density; i++ ) {
+                        if ( Math.random() > 0.97 ) {
+                            new Star();
+                        }
+                    }
+                    // 星星实时移动
+                    for ( var i in stars ) {
+                        stars[i].draw();
+                    }
+                    requestAnimationFrame(render);
+                    canvasControl =true;
+
+                }else {
+                    $("#starCanvas").hide();
+                }
+            }
+
+        }
+
+        if (!window.requestAnimationFrame) {
+            window.requestAnimationFrame = function(fn) {
+                setTimeout(fn, 17);
+            };
+        }
+
+        render(4);
+    //鼠标移动
+    /*
+   * 分析：
+   * 获取鼠标实时移动的坐标；m_move_x,m_move_y
+   * 鼠标按下时的坐标；m_down_x,m_down_y
+   * div的坐标；dx,dy
+   * 鼠标按下时，鼠标与div的偏移量；md_x,md_y
+   * div的新坐标；ndx,ndy
+   */
+
+    var isDown = false;//记录鼠标状态
+    var move_div ;//要操作的div对象
+    var m_move_x,m_move_y,m_down_x,m_down_y,dx,dy,md_x,md_y,ndx,ndy;
+    var new_ndx=0;
+    var new_ndy=0;
+    //鼠标按下
+    function down(){
+        move_div = document.getElementById("move_div");
+        isDown = true;
+
+        //获取鼠标按下时坐标
+        m_down_x = event.pageX;
+        m_down_y = event.pageY;
+
+        //获取div坐标
+        dx = move_div.offsetLeft;
+        dy = move_div.offsetTop;
+
+        //获取鼠标与div偏移量
+        md_x = m_down_x - dx;
+        md_y = m_down_y - dy;
+    }
+
+    //鼠标移动
+    function move(){
+        move_div = document.getElementById("move_div");
+
+        //实时更新div的坐标
+        dx = move_div.offsetLeft;
+        dy = move_div.offsetTop;
+
+        //获取鼠标移动实时坐标
+        m_move_x = event.pageX;
+        m_move_y = event.pageY;
+
+        //鼠标按下时移动才触发
+        if(isDown){
+
+            //获取新div坐标，鼠标实时坐标 - 鼠标与div的偏移量
+            ndx = m_move_x - md_x;
+            ndy = m_move_y - md_y;
+
+            //把新div坐标值赋给div对象
+            // move_div.style.left = ndx+"px";
+            // move_div.style.top = ndy+"px";
+            // move_div.style.backgroundPositionX = ndx+"px";
+            // move_div.style.backgroundPositionY = ndy+"px";
+        }
+
+    }
+
+    //鼠标释放
+    function up(){
+        //把新div坐标值赋给div对象
+        // background-position:10px 50px;
+        var newNdx = parseInt(Math.abs(ndx));//新值x轴
+        var newNdy = parseInt(Math.abs(ndy));//新增y轴
+        backControl = 200;
+        if(newNdx>newNdy){//x轴移动
+           if(newNdx-newNdy>200){
+               backControl = 1200;
+           }
+           if(ndx>0){//x轴
+               new_ndx+=backControl;
+           }else {
+               new_ndx-=backControl;
+           }
+        }else{//y轴移动
+            if(newNdy-newNdx>200){
+                backControl = 1200;
+            }
+            if(ndy>0){//x轴
+                new_ndy+=backControl;
+            }else {
+                new_ndy-=backControl;
+            }
+        }
+
+        // move_div.style.backgroundPositionX = new_ndx+"px";
+        // move_div.style.backgroundPositionY = new_ndy+"px";
+        $("#move_div").animate({'backgroundPositionX':''+new_ndx+'px'},300);
+        $("#move_div").animate({'backgroundPositionY':''+new_ndy+'px'},300)
+
+        isDown = false;
+    }
+</script>
+</body>
+</html>

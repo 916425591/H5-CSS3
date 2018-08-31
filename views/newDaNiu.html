@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+    <title>Canvas昼夜</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        #move_div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            /*background: url("../images/stars.png") #000;*/
+            /*background: url("../images/yun.jpg");*/
+            /*background-color:#000;*/
+        }
+        #move_div > canvas {
+            position: absolute;
+            width: 1920px;
+            height: 100%;
+            left: 50%;
+            margin-left: -960px;
+        }
+
+        body{
+            margin: 0px;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            padding: 0px;
+        }
+        .faloating{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 1;
+        }
+        .faloating button{
+            float: left;
+            border-radius:4px ;
+            background: #1c7430;
+            width: 96px;
+            height: 30px;
+            margin-right: 5px;
+            border: none;
+            color: #fff;
+        }
+        .faloating button:hover{
+            background: #20d248;
+            box-shadow: 0px 0px 10px #20d248;
+            cursor: pointer;
+        }
+        .on_of{
+            display: inline-block;
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            background: #1c7430;
+            box-shadow: 0px 0px 10px #dddddd;
+        }
+        .twinkling {
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            width:100%;
+            height:100%;
+            display:block;
+        }
+        .twinkling{
+            background:transparent url(../images/twinkling.png) repeat top center;
+            z-index:1;
+
+            -moz-animation:move-twink-back 200s linear infinite;
+            -ms-animation:move-twink-back 200s linear infinite;
+            -o-animation:move-twink-back 200s linear infinite;
+            -webkit-animation:move-twink-back 200s linear infinite;
+            animation:move-twink-back 200s linear infinite;
+        }
+
+        @keyframes move-twink-back {
+            from {background-position:0 0;}
+            to {background-position:-10000px 5000px;}
+        }
+        @-webkit-keyframes move-twink-back {
+            from {background-position:0 0;}
+            to {background-position:-10000px 5000px;}
+        }
+        @-moz-keyframes move-twink-back {
+            from {background-position:0 0;}
+            to {background-position:-10000px 5000px;}
+        }
+        @-ms-keyframes move-twink-back {
+            from {background-position:0 0;}
+            to {background-position:-10000px 5000px;}
+        }
+
+        /*全局*/
+        .global {
+            animation:global 3000s linear infinite;
+            -webkit-animation:global 3000s linear infinite; /*Safari and Chrome*/
+        }
+        @keyframes global
+        {
+            0% {background-position-x: 0px}
+            100%  {background-position-x: 50000px;}
+        }
+        @-webkit-keyframes global /*Safari and Chrome*/
+        {
+            0% {background-position-x: 0px}
+            100%  {background-position-x: 50000px;}
+        }
+        /*白天*/
+        .night {
+            animation:night 3s ;
+            -webkit-animation:night 3s ; /*Safari and Chrome*/
+        }
+        @keyframes night
+        {
+            0% {background:url("../images/stars.png") #000}
+            100%  {background:url("../images/timg.png");}
+        }
+
+        @-webkit-keyframes night /*Safari and Chrome*/
+        {
+            0% {background:url("../images/stars.png") #000}
+            100%  {background:url("../images/timg.png");}
+        }
+        /*黑夜*/
+        .daytime {
+            animation:daytime 3s ;
+            -webkit-animation:daytime 3s ; /*Safari and Chrome*/
+        }
+        @keyframes daytime
+        {
+            from {background:url("../images/timg.png");;}
+            to {background:url("../images/stars.png")  #000;}
+        }
+
+        @-webkit-keyframes daytime /*Safari and Chrome*/
+        {
+            from {background:url("../images/timg.png");}
+            to {background:url("../images/stars.png")  #000;}
+        }
+    </style>
+</head>
+
+<body>
+<div  id="move_div" onmousedown="down()" onmouseup="up()" onmousemove="move()">
+    <div class="twinkling"></div>
+</div>
+<div class="faloating">
+    <button onclick="render(0)">白天</button>
+    <!--<button>中午</button>-->
+    <!--<button>下午</button>-->
+    <!--<button>傍晚</button>-->
+    <button onclick="render(1,3000)">晚上</button>
+    <span class="on_of"></span>
+</div>
+<script>
+    function render(str,s) {
+        $("#move_div").removeClass('night');
+        $("#move_div").removeClass('daytime');
+        if(str == 1){//白天
+             $("#move_div").addClass('daytime').css({ 'background':'url("../images/stars.png") #000 '});
+             setTimeout(function () {
+                 $('.twinkling').show()
+             },3000)
+        }else if (str == 0){
+            // $('.body').animate({ background:"#ddd"},3000);
+            $("#move_div").addClass('night').css({ 'background':'url("../images/timg.png") '});
+            $('.twinkling').hide()
+        }
+    }
+    render(0);
+
+    //鼠标移动
+    /*
+   * 分析：
+   * 获取鼠标实时移动的坐标；m_move_x,m_move_y
+   * 鼠标按下时的坐标；m_down_x,m_down_y
+   * div的坐标；dx,dy
+   * 鼠标按下时，鼠标与div的偏移量；md_x,md_y
+   * div的新坐标；ndx,ndy
+   */
+
+    var isDown = false;//记录鼠标状态
+    var move_div ;//要操作的div对象
+    var m_move_x,m_move_y,m_down_x,m_down_y,dx,dy,md_x,md_y,ndx,ndy;
+    var new_ndx=0;
+    var new_ndy=0;
+    //鼠标按下
+    function down(){
+        move_div = document.getElementById("move_div");
+        isDown = true;
+
+        //获取鼠标按下时坐标
+        m_down_x = event.pageX;
+        m_down_y = event.pageY;
+
+        //获取div坐标
+        dx = move_div.offsetLeft;
+        dy = move_div.offsetTop;
+
+        //获取鼠标与div偏移量
+        md_x = m_down_x - dx;
+        md_y = m_down_y - dy;
+    }
+
+    //鼠标移动
+    function move(){
+        move_div = document.getElementById("move_div");
+
+        //实时更新div的坐标
+        dx = move_div.offsetLeft;
+        dy = move_div.offsetTop;
+
+        //获取鼠标移动实时坐标
+        m_move_x = event.pageX;
+        m_move_y = event.pageY;
+
+        //鼠标按下时移动才触发
+        if(isDown){
+
+            //获取新div坐标，鼠标实时坐标 - 鼠标与div的偏移量
+            ndx = m_move_x - md_x;
+            ndy = m_move_y - md_y;
+
+            //把新div坐标值赋给div对象
+            // move_div.style.left = ndx+"px";
+            // move_div.style.top = ndy+"px";
+            // move_div.style.backgroundPositionX = ndx+"px";
+            // move_div.style.backgroundPositionY = ndy+"px";
+        }
+
+    }
+
+    //鼠标释放
+    function up(){
+        //把新div坐标值赋给div对象
+        // background-position:10px 50px;
+
+        console.log(ndx,ndy)
+        var newNdx = parseInt(Math.abs(ndx));//新值x轴
+        var newNdy = parseInt(Math.abs(ndy));//新增y轴
+        if(newNdx>newNdy){//x轴移动
+            if(ndx>0){//x轴
+                new_ndx+=250;
+            }else {
+                new_ndx-=250;
+            }
+        }else{//y轴移动
+            if(ndy>0){//x轴
+                new_ndy+=250;
+            }else {
+                new_ndy-=250;
+            }
+        }
+
+        move_div.style.backgroundPositionX = new_ndx+"px";
+        move_div.style.backgroundPositionY = new_ndy+"px";
+
+        isDown = false;
+    }
+</script>
+</body>
+</html>

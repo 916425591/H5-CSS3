@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Script Tutorials" />
+    <title>昼夜交替</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <div class="apollp">
+        <!--<img src="../images/e_moon2.png">-->
+        <div class="apollp_sun"></div>
+    </div>
+    <div >
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+    </div>
+</body>
+</html>
+<script>
+    function InjectFun(){
+        const MESSAGE_TO_T3D_EVENT_FORCE_SET_T3D_VISIBLE  = "MESSAGE_TO_T3D_EVENT_FORCE_SET_T3D_VISIBLE";
+        function PostMessageToTop(msg) {
+            window.top.postMessage(msg, "*");
+        }
+        var oldAlert = window.alert;
+        var oldConfirm = window.confirm;
+        var oldPrompt = window.prompt;
+        window.alert = function (str) {
+            console.log('before alert');
+            PostMessageToTop({message: MESSAGE_TO_T3D_EVENT_FORCE_SET_T3D_VISIBLE, value: {visible: false}});
+            oldAlert(str);
+            setTimeout(function(){
+                PostMessageToTop({message: MESSAGE_TO_T3D_EVENT_FORCE_SET_T3D_VISIBLE, value: {visible: true}});
+            }, 40);
+            console.log('after alert');
+        };
+        window.confirm = function (str) {
+            console.log('before confirm');
+            PostMessageToTop({message: MESSAGE_TO_T3D_EVENT_FORCE_SET_T3D_VISIBLE, value: {visible: false}});
+            var ret = oldConfirm(str);
+            PostMessageToTop({message: MESSAGE_TO_T3D_EVENT_FORCE_SET_T3D_VISIBLE, value: {visible: true}});
+            console.log('after confirm');
+            return ret;
+        };
+        window.prompt = function (str1, str2) {
+            console.log('before prompt');
+            PostMessageToTop({message: MESSAGE_TO_T3D_EVENT_FORCE_SET_T3D_VISIBLE, value: {visible: false}});
+            var ret = oldPrompt(str1, str2);
+            PostMessageToTop({message: MESSAGE_TO_T3D_EVENT_FORCE_SET_T3D_VISIBLE, value: {visible: true}});
+            console.log('after prompt');
+            return ret;
+        };
+    };
+    InjectFun();
+    var s=2;
+    var imgObj = $(".apollp img");
+    // setInterval(function () {
+    //     if(s%2==0){
+    //         imgObj.hide();
+    //         $('.apollp_sun').css({
+    //             'display': 'block'
+    //         });
+    //
+    //         $('.stars').addClass('daytime').removeClass('stars');
+    //         $('.twinkling').css({
+    //             'background': 'none'
+    //         });
+    //         $('.clouds').css({
+    //             'background': 'none'
+    //         });
+    //     }else{
+    //         imgObj.show();
+    //         $('.apollp_sun').css({
+    //             'display': 'none'
+    //         });
+    //
+    //         $('.daytime').addClass('stars').removeClass('daytime');
+    //         $('.twinkling').css({
+    //             'background': 'transparent url(../images/twinkling.png) repeat top center'
+    //         });
+    //         $('.clouds').css({
+    //             'background': 'transparent url(../images/clouds.png) repeat top center'
+    //         });
+    //     }
+    //     s=s+1;
+    // },20000)
+</script>
+<style type="text/css">
+    /* ==============================================================================================
+This copyright notice must be kept untouched in the stylesheet at all times.
+The original version of this stylesheet and the associated (x)html
+is available at http://www.script-tutorials.com/night-sky-with-twinkling-stars/
+Copyright (c) Script Tutorials. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any way to fit your requirements.
+================================================================================================= */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    header {
+        background-color:rgba(33, 33, 33, 0.9);
+        color:#ffffff;
+        display:block;
+        font: 14px/1.3 Arial,sans-serif;
+        height:50px;
+        position:relative;
+        z-index:5;
+    }
+    h2{
+        margin-top: 30px;
+        text-align: center;
+    }
+    header h2{
+        font-size: 22px;
+        margin: 0 auto;
+        padding: 10px 0;
+        width: 80%;
+        text-align: center;
+    }
+    header a, a:visited {
+        text-decoration:none;
+        color:#fcfcfc;
+    }
+
+    @keyframes move-twink-back {
+        from {background-position:0 0;}
+        to {background-position:-10000px 5000px;}
+    }
+    @-webkit-keyframes move-twink-back {
+        from {background-position:0 0;}
+        to {background-position:-10000px 5000px;}
+    }
+    @-moz-keyframes move-twink-back {
+        from {background-position:0 0;}
+        to {background-position:-10000px 5000px;}
+    }
+    @-ms-keyframes move-twink-back {
+        from {background-position:0 0;}
+        to {background-position:-10000px 5000px;}
+    }
+
+    @keyframes move-clouds-back {
+        from {background-position:0 0;}
+        to {background-position:10000px 0;}
+    }
+    @-webkit-keyframes move-clouds-back {
+        from {background-position:0 0;}
+        to {background-position:10000px 0;}
+    }
+    @-moz-keyframes move-clouds-back {
+        from {background-position:0 0;}
+        to {background-position:10000px 0;}
+    }
+    @-ms-keyframes move-clouds-back {
+        from {background-position: 0;}
+        to {background-position:10000px 0;}
+    }
+
+    .stars, .twinkling, .clouds,.daytime {
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        width:100%;
+        height:100%;
+        display:block;
+    }
+
+    .stars {
+        background:#000 url(../images/stars.png) repeat top center;
+        z-index:0;
+    }
+    .daytime{
+        -moz-animation:mydaytime 20s linear infinite;
+        -ms-animation:mydaytime 20s linear infinite;
+        -o-animation:mydaytime 20s linear infinite;
+        -webkit-animation:mydaytime 20s linear infinite;
+        animation:mydaytime 20s linear infinite;
+        /*background: -webkit-gradient(linear, 88% 19%, 111% 100%, from(#e07437), to(#3ab7ec));*/
+    }
+    @keyframes mydaytime {
+        0% {
+            background: -webkit-gradient(linear, 0% 0, -50% 100%, from(#3ab7ec), to(#e07437));;
+        }
+
+        50% {
+                background: -webkit-gradient(linear, 0% 0%, 0% 52%, from(#ffffff), to(#00b3ff));
+        }
+        100% {
+           background: -webkit-gradient(linear, 118% 114%, 85% 50%, from(#e07437), to(#3ab7ec));
+        }
+    }
+    .apollp_sun{
+        display: none;
+        height: 13rem;
+        width: 13rem;
+        margin: 20px;
+        border-radius: 50%;
+        -moz-animation:apollp_sun 20s linear infinite;
+        -ms-animation:apollp_sun 20s linear infinite;
+        -o-animation:apollp_sun 20s linear infinite;
+        -webkit-animation:apollp_sun 20s linear infinite;
+        animation:apollp_sun 20s linear infinite;
+    }
+    @keyframes apollp_sun {
+        0% {
+            background: -webkit-gradient(linear, 34% 64%, 100% -5%, from(#f5f5f5), to(#f5f5f5));
+            /*background: -webkit-gradient(linear, 34% 64%, 100% -5%, from(#ddd), to(#ddd));*/
+            height: 8rem;
+            width: 8rem;
+            box-shadow: 0px 0px 50px 20px #ddd;
+        }
+
+        50% {
+            background: -webkit-gradient(linear, 34% 64%, 100% -5%, from(#fff), to(#fff));
+            height: 7rem;
+            width: 7rem;
+            box-shadow: 0px 0px 50px 20px #fff;
+        }
+        100% {
+            background: -webkit-gradient(linear, 34% 64%, 100% -5%, from(#ff6d1a), to(#f5f5f5));
+            /*background: -webkit-gradient(linear, 34% 64%, 100% -5%, from(#ddd), to(#ddd));*/
+            height: 8rem;
+            width: 8rem;
+            box-shadow: 0px 0px 50px 20px #ff6d1a;
+        }
+    }
+    .twinkling{
+        background:transparent url(../images/twinkling.png) repeat top center;
+        z-index:1;
+
+        -moz-animation:move-twink-back 200s linear infinite;
+        -ms-animation:move-twink-back 200s linear infinite;
+        -o-animation:move-twink-back 200s linear infinite;
+        -webkit-animation:move-twink-back 200s linear infinite;
+        animation:move-twink-back 200s linear infinite;
+    }
+
+    .clouds{
+        background:transparent url(../images/clouds.png) repeat top center;
+        z-index:3;
+
+        -moz-animation:move-clouds-back 200s linear infinite;
+        -ms-animation:move-clouds-back 200s linear infinite;
+        -o-animation:move-clouds-back 200s linear infinite;
+        -webkit-animation:move-clouds-back 200s linear infinite;
+        animation:move-clouds-back 200s linear infinite;
+    }
+    .apollp{
+        width: 10%;
+        position: absolute;
+        z-index: 11;
+        top: 50%;
+        left: -10%;
+        -moz-animation:appllp-back 20s linear infinite;
+        -ms-animation:appllp-back 20s linear infinite;
+        -o-animation:appllp-back 20s linear infinite;
+        -webkit-animation:appllp-back 20s linear infinite;
+        animation:appllp-back 20s linear infinite;
+    }
+    .apollp img{
+        width: 100%;
+    }
+
+    @keyframes appllp-back {
+        0% { left: -10%;top: 35%;}
+        /*15% {left: 15%;top: 35%;}*/
+        /*35% {left: 35%;top: 15%;}*/
+        50% {left: 50%;top: 5%;}
+        /*65% {left: 65%;top: 15%;}*/
+        /*85% {left: 85%;top: 35%;}*/
+        100% {left: 110%;top: 35%;}
+    }
+
+</style>

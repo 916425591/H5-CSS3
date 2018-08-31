@@ -14,7 +14,7 @@
     <header class="header"><span>header</span></header>
     <section class="section">
         <aside class="aside">
-
+            <button onclick="Wopen()">弹</button>
         </aside>
     </section>
     <footer class="footer"><span>xxx科技</span></footer>
@@ -31,5 +31,33 @@
     if((objs instanceof Object)) {
         console.log(name)
     }
+    var newArrs = ['a','b']
+    var newstorArr = [{"a":{"b":10}},{"a":{"b":8}},{"a":{"b":9}}]
+    function newArrTor(arrData,storData) {
+        for(var i=0;i<storData.length;i++){
+            var stor  = storData[i];
+            var cusstr=null
+            for(var j=0;j<arrData.length;j++){//属性值
+                var  newArr = arrData[j]
+                if (stor[newArr]) {
+                    cusstr = stor[newArr];
+                    if (newArr == arrData[arrData.length - 1]) {
+                        stor.sortResult = stor;
+                    }
+                }
+            }
+        }
+    }
+    newArrTor(newArrs,newstorArr);
+    newstorArr.sort(function (a, b) {
+        return (a.sortResult > b.sortResult ? 1 : -1);
+    })
+     let header = '你好蠢好蠢'
+    function Wopen(){
+        window.open('http://localhost:63342/H5-CSS3/views/index.html','_blank','width=600,height=400,top=100px,left=0px')
+    }
+
 </script>
 </html>
+
+
