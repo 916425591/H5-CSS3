@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态切换</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <div id="swtcher">
+
+    </div>
+    <div class="trigger">
+        <button onclick="switcher(0)">白天</button><button onclick="switcher(1)">晚上</button>
+    </div>
+</body>
+</html>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    /*白天切换晚上*/
+    .daytime{
+        animation: animate-daytime 5s ;
+    }
+
+    @keyframes animate-daytime {
+        0%{
+            background: url("../skybox/switcher/whther.png") no-repeat;
+            background-size:100% 100% ;
+        }
+        100%{
+            background: url("../skybox/switcher/noght.png");
+            background-size:100% 100% ;
+        }
+
+        /*100%{*/
+            /*background: url("../skybox/switcher/whther.png");*/
+            /*background-size:100% 100% ;*/
+        /*}*/
+    }
+    /*晚上切换白天*/
+    .noght{
+        animation: animate-noght 5s ;
+    }
+
+    @keyframes animate-noght {
+        0%{
+            background: url("../skybox/switcher/noght.png") no-repeat;
+            background-size:100% 100% ;
+        }
+        100%{
+            background: url("../skybox/switcher/whther.png");
+            background-size:100% 100% ;
+        }
+        /*100%{*/
+        /*background: url("../skybox/switcher/whther.png");*/
+        /*background-size:100% 100% ;*/
+        /*}*/
+    }
+
+    #swtcher{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    .trigger{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    .trigger button{
+        background: #3ab7ec;
+        color: #fff;
+        border-radius: 25px;
+        border: none;
+        width: 56px;
+        height: 30px;
+        outline: none;
+        margin-right: 16px;
+        cursor: pointer;
+    }
+    .trigger button:hover{
+        background: #00b3ff;
+        box-shadow: 0px 0px 15px #00b3ff;
+    }
+</style>
+<script>
+    function  switcher(index) {
+        $('#swtcher').removeClass('daytime').removeClass('noght');
+        if(index ===1){
+            $('#swtcher').addClass('daytime').css({
+                background:'url("../skybox/switcher/noght.png")',
+                backgroundSize:'100% 100% '
+            });
+        }else{
+            $('#swtcher').addClass('noght').css({
+                background:'url("../skybox/switcher/whther.png")',
+                backgroundSize:'100% 100% '
+            });
+        }
+    }
+    switcher(1);
+</script>

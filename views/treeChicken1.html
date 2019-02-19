@@ -27,15 +27,18 @@
         scene = new THREE.Scene();
         //天空盒
        // var path = "http://ae01.alicdn.com/kf/";       //设置路径
-        var path="http://localhost:63342/H5-CSS3/skybox/skyboxOh/"
+        var path="http://localhost:63342/H5-CSS3/skybox/bluesky/"
         var format = '.jpg';                        //设定格式
         var urls = [
-            path + 'Sky_Space_Left'+ format,
-            path + 'Sky_Space_Right'+ format,
-            path + 'Sky_Space_Up' + format,
-            path + 'Sky_Space_Down' + format,
-            path + 'Sky_Space_Front' + format,
-            path + 'Sky_Space_Back' + format,
+
+
+            path + 'bluesky_rt'+ format,
+            path + 'bluesky_lf'+ format,
+            path + 'bluesky_up' + format,
+            path + 'bluesky_dn' + format,
+            path + 'bluesky_fr' + format,
+            path + 'bluesky_bk' + format,
+
         ];
         var textureCube = new THREE.CubeTextureLoader().load( urls );
 

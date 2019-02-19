@@ -1,55 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7117c569-5c86-4f03-9aa6-073769f100db" name="默认的" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-grid.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-reboot.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/chicken.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/apollp_1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/apollp_2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/apollp_3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/apollp_4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/apollp_5.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/apollp_6.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/apollp_7.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/Yun.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/Yun1.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.bundle.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxDusy/sky_negX.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxDusy/sky_negY.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxDusy/sky_negZ.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxDusy/sky_posX.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxDusy/sky_posY.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxDusy/sky_posZ.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxNight/Sky_Space_Back.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxNight/Sky_Space_Down.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxNight/Sky_Space_Front.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxNight/Sky_Space_Left.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxNight/Sky_Space_Right.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxNight/Sky_Space_Up.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxOh/Sky_Space_Back.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxOh/Sky_Space_Down.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxOh/Sky_Space_Front.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxOh/Sky_Space_Left.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxOh/Sky_Space_Right.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/skybox/skyboxOh/Sky_Space_Up.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/chickenDinner.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/newChicken.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/newDaNiu.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/newDinner.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/treeChicken.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/treeChicken1.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    <list default="true" id="7117c569-5c86-4f03-9aa6-073769f100db" name="默认的" comment="默认的">
+      <change afterPath="$PROJECT_DIR$/images/yun.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/files.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/json/dcv-all.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/bluesky/bluesky_bk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/bluesky/bluesky_dn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/bluesky/bluesky_fr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/bluesky/bluesky_lf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/bluesky/bluesky_rt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/bluesky/bluesky_up.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/bluesky/config.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/bluesky/index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/white/config.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/white/index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/white/white_bk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/white/white_dn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/white/white_fr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/white/white_lf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/white/white_rt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybox/white/white_up.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/three/OrbitControls.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/three/three.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/three/three.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/CSS3-3D.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/file_input.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/fx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/prototype.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/switcher.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/webgl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webgl_js/OrbitControls.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webgl_js/dat.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webgl_js/detector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webgl_js/skt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webgl_js/skyNew.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webgl_js/status.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webgl_js/three.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webgl_js/water.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/apollp_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/apollp_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/apollp_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/apollp_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/apollp_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/apollp_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/apollp_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/yun.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybox/switcher/noght.png" beforeDir="false" afterPath="$PROJECT_DIR$/skybox/switcher/noght.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybox/switcher/whther.png" beforeDir="false" afterPath="$PROJECT_DIR$/skybox/switcher/whther.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/treeChicken.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/treeChicken.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/treeChicken1.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/treeChicken1.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,70 +65,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="53" />
+            <state relative-caret-position="350">
+              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chickenDinner.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/chickenDinner.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3275">
-              <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newChicken.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/newChicken.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="821">
-              <caret line="212" column="78" lean-forward="false" selection-start-line="212" selection-start-column="78" selection-end-line="212" selection-end-column="78" />
-              <folding>
-                <element signature="e#3179#3528#0" expanded="false" />
-                <element signature="e#5464#6635#0" expanded="false" />
-                <element signature="e#7772#8816#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="treeChicken.html" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/treeChicken.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="350">
+              <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="treeChicken1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/treeChicken1.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/fx.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-              <folding />
+            <state relative-caret-position="150">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newDaNiu.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/newDaNiu.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/CSS3-3D.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3775">
-              <caret line="157" column="30" lean-forward="false" selection-start-line="157" selection-start-column="30" selection-end-line="157" selection-end-column="30" />
+            <state relative-caret-position="350">
+              <caret line="277" column="6" lean-forward="true" selection-start-line="277" selection-start-column="6" selection-end-line="277" selection-end-column="6" />
               <folding>
-                <element signature="e#3471#3578#0" expanded="false" />
-                <element signature="e#3587#3741#0" expanded="false" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#html#0;n#!!top" />
+                <element signature="e#6281#6569#0" />
+                <element signature="e#6614#6798#0" />
               </folding>
             </state>
           </provider>
@@ -139,36 +123,40 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>jq22</find>
-      <find>www</find>
-      <find>location</find>
-      <find>http</find>
-      <find>w</find>
-      <find>anim</find>
-      <find>canvas</find>
-      <find>gl</find>
-      <find>shade</find>
-      <find>ocean</find>
-      <find>apollp</find>
-      <find>apollp_sun</find>
-      <find>daytime</find>
-      <find>clouds</find>
-      <find>main</find>
-      <find>redraw</find>
-      <find>getMinRandom</find>
-      <find>settings</find>
-      <find>requestAnimationFrame</find>
-      <find>density</find>
-      <find>drag</find>
-      <find>move</find>
-      <find>main-back</find>
-      <find>stars</find>
-      <find>move-clouds-back</find>
-      <find>twinkling</find>
-      <find>addClass</find>
-      <find>move-twink-back</find>
-      <find>render</find>
+      <find>direction</find>
+      <find>phi</find>
+      <find>sunPosition</find>
+      <find>vUv</find>
+      <find>uniforms</find>
+      <find>uniform</find>
+      <find>vec2</find>
+      <find>waterNormals</find>
+      <find>texture</find>
+      <find>distortion</find>
+      <find>sampler2D</find>
+      <find>const</find>
+      <find>texture2D</find>
+      <find>fragmentShader</find>
+      <find>getNoise</find>
+      <find>uv</find>
+      <find>worldPosition</find>
+      <find>noise</find>
+      <find>Position</find>
+      <find>surfaceNormal</find>
+      <find>normalSampler</find>
+      <find>mirrorShader</find>
+      <find>time</find>
+      <find>hgPhase</find>
+      <find>inverse</find>
+      <find>sR</find>
+      <find>cubeCamera</find>
+      <find>Fex</find>
+      <find>pageItemDisable</find>
+      <find>max-do</find>
     </findStrings>
+    <dirStrings>
+      <dir>E:\gitbub\H5-CSS3\webgl_js</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -191,41 +179,44 @@
         <option value="$PROJECT_DIR$/views/newDinner.html" />
         <option value="$PROJECT_DIR$/views/newDaNiu.html" />
         <option value="$PROJECT_DIR$/views/newChicken.html" />
+        <option value="$PROJECT_DIR$/three/OrbitControls.js" />
+        <option value="$PROJECT_DIR$/three/three.js" />
+        <option value="$PROJECT_DIR$/three/three.min.js" />
+        <option value="$PROJECT_DIR$/views/switcher.html" />
         <option value="$PROJECT_DIR$/views/treeChicken.html" />
+        <option value="$PROJECT_DIR$/views/fx.html" />
+        <option value="$PROJECT_DIR$/js/files.js" />
+        <option value="$PROJECT_DIR$/webgl_js/OrbitControls.js" />
+        <option value="$PROJECT_DIR$/webgl_js/dat.min.js" />
+        <option value="$PROJECT_DIR$/webgl_js/status.min.js" />
+        <option value="$PROJECT_DIR$/webgl_js/three.js" />
+        <option value="$PROJECT_DIR$/webgl_js/detector.js" />
+        <option value="$PROJECT_DIR$/webgl_js/water.js" />
+        <option value="$PROJECT_DIR$/webgl_js/skyNew.js" />
+        <option value="$PROJECT_DIR$/webgl_js/skt.js" />
+        <option value="$PROJECT_DIR$/views/webgl.html" />
+        <option value="$PROJECT_DIR$/views/proent.html" />
+        <option value="$PROJECT_DIR$/views/test.html" />
+        <option value="$PROJECT_DIR$/views/file_input.html" />
+        <option value="$PROJECT_DIR$/views/prototype.html" />
         <option value="$PROJECT_DIR$/views/treeChicken1.html" />
+        <option value="$PROJECT_DIR$/views/page.html" />
+        <option value="$PROJECT_DIR$/views/CSS3-3D.html" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="193" />
-    <option name="y" value="170" />
-    <option name="width" value="1749" />
-    <option name="height" value="706" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="添加" />
+    <option name="x" value="233" />
+    <option name="y" value="54" />
+    <option name="width" value="1626" />
+    <option name="height" value="1031" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,44 +227,52 @@
             <path>
               <item name="H5-CSS3" type="b2602c69:ProjectViewProjectNode" />
               <item name="H5-CSS3" type="462c0819:PsiDirectoryNode" />
-              <item name="skybox" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="H5-CSS3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="H5-CSS3" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="H5-CSS3" type="b2602c69:ProjectViewProjectNode" />
               <item name="H5-CSS3" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="H5-CSS3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="H5-CSS3" type="462c0819:PsiDirectoryNode" />
+              <item name="webgl_js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\gitbub\H5-CSS3\images" />
       <recent name="E:\gitbub\H5-CSS3\skybox\skyboxDusy" />
       <recent name="E:\gitbub\H5-CSS3\skybox\skyboxNight" />
       <recent name="E:\gitbub\H5-CSS3\skybox" />
       <recent name="E:\gitbub\H5-CSS3\img" />
-      <recent name="E:\gitbub\H5-CSS3\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\gitbub\H5-CSS3\skybox\skyboxOh" />
-      <recent name="E:\gitbub\H5-CSS3\skybox\skyboxNew" />
+      <recent name="E:\gitbub\H5-CSS3\skybox\bluesky" />
       <recent name="E:\gitbub\H5-CSS3\skybox" />
       <recent name="E:\gitbub\H5-CSS3\views" />
-      <recent name="E:\gitbub\H5-CSS3\images" />
+      <recent name="E:\gitbub\H5-CSS3\json" />
+      <recent name="E:\gitbub\H5-CSS3\skybox\skyboxOh" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -287,9 +286,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -318,7 +314,36 @@
       <workItem from="1535592024300" duration="11196000" />
       <workItem from="1535614609996" duration="365000" />
       <workItem from="1535616348915" duration="7000" />
-      <workItem from="1535616770906" duration="6389000" />
+      <workItem from="1535616770906" duration="17176000" />
+      <workItem from="1535699921474" duration="3659000" />
+      <workItem from="1535938995135" duration="16982000" />
+      <workItem from="1536024740723" duration="29660000" />
+      <workItem from="1536112094573" duration="597000" />
+      <workItem from="1536116320921" duration="591000" />
+      <workItem from="1536892445669" duration="1457000" />
+      <workItem from="1537148593640" duration="345000" />
+      <workItem from="1537178475259" duration="412000" />
+      <workItem from="1542621457645" duration="905000" />
+      <workItem from="1542770868331" duration="3805000" />
+      <workItem from="1542787180799" duration="637000" />
+      <workItem from="1542872262611" duration="2037000" />
+      <workItem from="1542886875578" duration="3477000" />
+      <workItem from="1542937162079" duration="1271000" />
+      <workItem from="1543315909916" duration="1579000" />
+      <workItem from="1543368776115" duration="592000" />
+      <workItem from="1543456267654" duration="585000" />
+      <workItem from="1543893024102" duration="696000" />
+      <workItem from="1543919061139" duration="949000" />
+      <workItem from="1543973570198" duration="3302000" />
+      <workItem from="1544433364231" duration="923000" />
+      <workItem from="1544533852123" duration="41000" />
+      <workItem from="1545203355728" duration="608000" />
+      <workItem from="1545876060542" duration="915000" />
+      <workItem from="1546854538755" duration="858000" />
+      <workItem from="1547779008046" duration="4763000" />
+      <workItem from="1548042155150" duration="12523000" />
+      <workItem from="1548121135004" duration="2992000" />
+      <workItem from="1548151404102" duration="1035000" />
     </task>
     <task id="LOCAL-00001" summary="初始化布局">
       <created>1525750447738</created>
@@ -338,39 +363,36 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94983000" />
+    <option name="totallyTimeSpent" value="203966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11801897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13593256" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="运行" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32900432" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="调试" order="12" />
+      <window_info anchor="bottom" id="找到" order="13" weight="0.32900432" />
+      <window_info anchor="bottom" id="消息" order="14" weight="0.32900432" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化布局" />
@@ -385,376 +407,286 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="56" column="121" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/three.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252600">
-          <caret line="10104" column="34" lean-forward="false" selection-start-line="10104" selection-start-column="34" selection-end-line="10104" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/TweenMax.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2650">
-          <caret line="316" column="51" lean-forward="false" selection-start-line="316" selection-start-column="51" selection-end-line="316" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/three.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252600">
-          <caret line="10104" column="34" lean-forward="false" selection-start-line="10104" selection-start-column="34" selection-end-line="10104" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/TweenMax.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="54" column="24" lean-forward="false" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2650">
-          <caret line="316" column="51" lean-forward="false" selection-start-line="316" selection-start-column="51" selection-end-line="316" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/three.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252600">
-          <caret line="10104" column="34" lean-forward="false" selection-start-line="10104" selection-start-column="34" selection-end-line="10104" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/TweenMax.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="56" column="7" lean-forward="false" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="164" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/three.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252600">
-          <caret line="10104" column="34" lean-forward="true" selection-start-line="10104" selection-start-column="34" selection-end-line="10104" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/TweenMax.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3400">
-          <caret line="346" column="18" lean-forward="true" selection-start-line="346" selection-start-column="18" selection-end-line="346" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2875">
-          <caret line="115" column="25" lean-forward="false" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/TweenMax.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2975">
-          <caret line="16" column="7599" lean-forward="false" selection-start-line="16" selection-start-column="7599" selection-end-line="16" selection-end-column="7599" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/three.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252575">
-          <caret line="10103" column="35" lean-forward="true" selection-start-line="10103" selection-start-column="35" selection-end-line="10103" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/js-3.3.3.js" />
-    <entry file="file://$PROJECT_DIR$/js/jquery-3.1.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/TweenMax.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/canvas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2650">
-          <caret line="316" column="51" lean-forward="false" selection-start-line="316" selection-start-column="51" selection-end-line="316" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap-reboot.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/bootstrap.bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap-grid.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="56" column="121" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Yun1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16250">
-          <caret line="650" column="32" lean-forward="false" selection-start-line="650" selection-start-column="32" selection-end-line="650" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/shader/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/three.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247100">
-          <caret line="9884" column="40" lean-forward="false" selection-start-line="9884" selection-start-column="40" selection-end-line="9884" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/chicken.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1675">
-          <caret line="67" column="39" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="131" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Yun.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="86" lean-forward="false" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/newDinner.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3473">
-          <caret line="196" column="22" lean-forward="false" selection-start-line="196" selection-start-column="11" selection-end-line="196" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="53" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/newDaNiu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3775">
-          <caret line="157" column="30" lean-forward="false" selection-start-line="157" selection-start-column="30" selection-end-line="157" selection-end-column="30" />
-          <folding>
-            <element signature="e#3471#3578#0" expanded="false" />
-            <element signature="e#3587#3741#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/chickenDinner.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3275">
-          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/treeChicken1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/treeChicken.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-          <folding />
+          <caret line="196" column="22" selection-start-line="196" selection-start-column="11" selection-end-line="196" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/newChicken.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="821">
-          <caret line="212" column="78" lean-forward="false" selection-start-line="212" selection-start-column="78" selection-end-line="212" selection-end-column="78" />
+          <caret line="212" column="78" selection-start-line="212" selection-start-column="78" selection-end-line="212" selection-end-column="78" />
           <folding>
-            <element signature="e#3179#3528#0" expanded="false" />
-            <element signature="e#5464#6635#0" expanded="false" />
-            <element signature="e#7772#8816#0" expanded="false" />
+            <element signature="e#3179#3528#0" />
+            <element signature="e#5464#6635#0" />
+            <element signature="e#7772#8816#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="53" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/newDaNiu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2525">
+          <caret line="101" column="35" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/three.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22825">
+          <caret line="870" selection-start-line="870" selection-end-line="870" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/three.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24850">
+          <caret line="994" selection-start-line="994" selection-end-line="994" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/OrbitControls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25925">
+          <caret line="1037" selection-start-line="1037" selection-end-line="1037" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skybox/skyboxOh/Sky_Space_Back.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skybox/skyboxNight/Sky_Space_Up.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skybox/skyboxNew/Sky_Space_Right.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skybox/skyboxDusy/sky_negY.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skybox/skyboxPolar/Sky_Space_Down.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/files.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="413" selection-start-line="413" selection-end-line="413" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webgl_js/OrbitControls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21025">
+          <caret line="847" column="49" selection-start-line="847" selection-start-column="49" selection-end-line="847" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webgl_js/status.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webgl_js/three.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="47403" column="52" selection-start-line="47403" selection-start-column="52" selection-end-line="47403" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/twinkling.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/timg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/timg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/stars.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/e_moon2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/clouds.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/apollp_7.png" />
+    <entry file="file://$PROJECT_DIR$/images/apollp_6.png" />
+    <entry file="file://$PROJECT_DIR$/images/apollp_5.png" />
+    <entry file="file://$PROJECT_DIR$/images/apollp_4.png" />
+    <entry file="file://$PROJECT_DIR$/images/apollp_3.png" />
+    <entry file="file://$PROJECT_DIR$/images/dusk.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webgl_js/detector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/hs.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webgl_js/dat.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="13" column="14732" lean-forward="true" selection-start-line="13" selection-start-column="14732" selection-end-line="13" selection-end-column="14732" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/apollp_1.png" />
+    <entry file="file://$PROJECT_DIR$/images/apollp_2.png" />
+    <entry file="file://$PROJECT_DIR$/images/yun1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/yun.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webgl_js/skyNew.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webgl_js/water.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webgl_js/skt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="118" column="11" selection-start-line="118" selection-start-column="11" selection-end-line="118" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/proent.html" />
+    <entry file="file://$PROJECT_DIR$/views/webgl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2800">
+          <caret line="129" column="22" selection-start-line="129" selection-start-column="22" selection-end-line="129" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="e#4412#5754#0" />
+            <element signature="e#5853#6874#0" />
+            <element signature="e#7780#8007#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1375">
+          <caret line="71" column="7" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
+          <folding>
+            <element signature="e#1246#1625#0" />
+            <element signature="n#style#0;n#textarea#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/file_input.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2450">
+          <caret line="121" column="34" selection-start-line="121" selection-start-column="27" selection-end-line="121" selection-end-column="34" />
+          <folding>
+            <element signature="e#1060#1377#0" />
+            <element signature="e#1395#1510#0" />
+            <element signature="e#1528#1650#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/prototype.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3650">
+          <caret line="174" column="37" selection-start-line="174" selection-start-column="37" selection-end-line="174" selection-end-column="37" />
+          <folding>
+            <element signature="e#3053#3889#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/switcher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1375">
+          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/dcv-all.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/treeChicken1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/chickenDinner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/treeChicken.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/fx.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/CSS3-3D.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="277" column="6" lean-forward="true" selection-start-line="277" selection-start-column="6" selection-end-line="277" selection-end-column="6" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#html#0;n#!!top" />
+            <element signature="e#6281#6569#0" />
+            <element signature="e#6614#6798#0" />
           </folding>
         </state>
       </provider>

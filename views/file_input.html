@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File input</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+<div id="disp"></div>
+<div class="a-upload"><input type="file" name="" id="">点击这里上传文件</div>
+<div class="file">选择文件<input type="file" name="resourcesFile"></div>
+<div id="title"></div>
+<style>
+    .a-upload {
+        padding: 4px 10px;
+        height: 20px;
+        line-height: 20px;
+        position: relative;
+        cursor: pointer;
+        color: #888;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1
+    }
+
+    .a-upload input {
+        position: absolute;
+        font-size: 100px;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        cursor: pointer
+    }
+
+    .a-upload:hover {
+        color: #444;
+        background: #eee;
+        border-color: #ccc;
+        text-decoration: none
+    }
+
+    .file {
+        position: relative;
+        display: inline-block;
+        background: #D0EEFF;
+        border: 1px solid #99D3F5;
+        border-radius: 4px;
+        padding: 4px 12px;
+        overflow: hidden;
+        color: #1E88C7;
+        text-decoration: none;
+        text-indent: 0;
+        line-height: 20px;
+    }
+
+    .file input {
+        position: absolute;
+        font-size: 100px;
+        right: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    .file:hover {
+        background: #AADFFD;
+        border-color: #78C3F3;
+        color: #004974;
+        text-decoration: none;
+    }
+</style>
+</body>
+</html>
+<script>
+    // function Ajax() {
+    //     $.getJSON("../json/dcv-all.json", function (data) {
+    //         $.each(data, function (i, item) {
+    //             if (item.code.substring(0, 4) != "DCV_") {
+    //                 $("#disp").append("<p>" + item.code + "</p>");
+    //             }
+    //         });
+    //     });
+    // }
+    //
+    // Ajax();
+    objs={
+        "list":[{'a':1}],
+        "name":{
+            id:1,
+            name:2
+        },
+        "timename":{
+            id:1,
+            name:2
+        }
+    }
+    var  objName={
+        "name":{
+            id:1,
+            name:2
+        }
+    }
+    var Arrlength=0
+    var frameFindInArray = function (objs, obj) {
+        for (var i in objs) {
+            console.log(i)
+            for(var j in obj){
+                if (objs[i] != obj[j] && i!=j  ) {
+                    frameFindInArray(objs[i], obj);
+                } else {
+                    return obj;
+                }
+            }
+        }
+    };
+    // console.log('111111111111111',frameFindInArray(objs,objName));
+    str ="<p onclick='aaaa(objName,1)'>123123123123</p>"
+    $('#title').html(str);
+    var  aaaa = function (obj) {
+        console.log(obj)
+    }
+</script>

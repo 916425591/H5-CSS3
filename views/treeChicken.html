@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My first Three.js app</title>
+    <meta charset="UTF-8">
+    <title>three动态切换材质</title>
     <style>
-        body { margin: 0; }
+        body { margin: 0;padding: 0px;position: absolute;left: 0px;top:0px; width: 100%;height: 100%;overflow: hidden;}
         canvas { width: 100%; height: 100% }
     </style>
 </head>
-<body onload='init()'>
-<script src="http://wow.techbrood.com/libs/three.r73.js"></script>
-<script src="http://wow.techbrood.com/libs/threejs/r78/three.min.js"></script>
-<script src="http://wow.techbrood.com/libs/threejs/r78/js/controls/OrbitControls.js"></script>
+<body>
+<script src="../three/three.js"></script>
+<script src="../three/three.min.js"></script>
+<script src="../three/OrbitControls.js"></script>
 <script>
     var renderer, scene, camera, cube, light;
     //绑定canvas和渲染器
@@ -19,26 +20,25 @@
         renderer.setSize( window.innerWidth, window.innerHeight );
         document.body.appendChild( renderer.domElement );
         //清除画面颜色
-        renderer.setClearColor(0x000000);
+        renderer.setClearColor(0xdddddd);
     }
 
     //创建场景
-    function initScene() {
-        scene = new THREE.Scene();
+    function initScene(strUrl) {
+        scene = new THREE.Scene();//场景
         //天空盒
        // var path = "http://ae01.alicdn.com/kf/";       //设置路径
-        var path="http://localhost:63342/H5-CSS3/skybox/"
+        var path='http://localhost:63342/H5-CSS3/skybox/'+strUrl+'/'
         var format = '.jpg';                        //设定格式
         var urls = [
-            path + 'sky_posX' + format,
-            path + 'sky_negX' + format,
-            path + 'sky_posY' + format,
-            path + 'sky_negY'+ format,
-            path + 'sky_posZ'+ format,
-            path + 'sky_negZ' + format,
+            path + 'Sky_Space_Left'+ format,
+            path + 'Sky_Space_Right'+ format,
+            path + 'Sky_Space_Up' + format,
+            path + 'Sky_Space_Down' + format,
+            path + 'Sky_Space_Front' + format,
+            path + 'Sky_Space_Back' + format,
         ];
         var textureCube = new THREE.CubeTextureLoader().load( urls );
-
         scene.background = textureCube; //作为背景贴图
     }
 
@@ -78,13 +78,14 @@
 
     function init() {
         initRender();
-        initScene();
+        initScene('skyBoxPolar');
         initLight();
         initCamera();
         render();
         var controls = new THREE.OrbitControls( camera);
         window.addEventListener('resize', onResize, false);
     }
+    init();
 </script>
 </body>
 </html>

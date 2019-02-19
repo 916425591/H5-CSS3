@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        #disp{
+            width: 96%;
+            height: 92%;
+            margin: 2%;
+            position: absolute;
+            background: #dddddd;
+            border-radius:3px ;
+            box-shadow: 0px 0px 10px #dddddd;
+        }
+        #test{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            position: absolute;
+            background: #1e7e34;
+            overflow: auto;
+        }
+
+        .animation{
+            animation:showPanel 1s ease;
+            -moz-animation:showPanel 1s ease-in;
+            -webkit-animation:showPanel 1s ease;
+        }
+
+        @keyframes showPanel
+        {
+            0%   {transform:scale(0.5);opacity:0.0;}
+            100% {transform:scale(1);opacity:1.0;}
+        }
+
+        /* Firefox */
+        @-moz-keyframes showPanel
+        {
+            0%   {-moz-transform:scale(0.5);opacity:0.0;}
+            100% {-moz-transform:scale(1);opacity:1.0;}
+        }
+
+        /* Safari and Chrome */
+        @-webkit-keyframes showPanel
+        {
+            0%   {-webkit-transform:scale(0.75);opacity:0.0;}
+            100% {-webkit-transform:scale(1);opacity:1.0;}
+        }
+    </style>
+</head>
+<body>
+   <script>
+     var UserPrototype = function (id,name) {
+         this.id = id;
+         this.name = name;
+         this.token = this.id+this.name
+     }
+     UserPrototype.prototype.getId = function(){
+         return this.id;
+     }
+     UserPrototype.prototype.setUser = function () {
+         var user ={
+             'name':this.name,
+             'id':this.id
+         }
+         return user
+     }
+     UserPrototype.prototype.init = function () {
+         this.getId();
+         this.setUser();
+         return this.getId()+this.setUser()
+     }
+
+     var newName = new UserPrototype('123','admin')
+     newName.init()
+       console.log(newName.setUser().id)
+     window.onload = function() {
+         var rec = document.getElementById("test");
+         var down = false;
+         var dx = 0;
+         var dy = 0;
+         var sx = 0;
+         var sy = 0;
+         document.onmousemove = function(e){
+             if (down) {
+                 var ev = e || event;
+                 console.log(ev.clientY)
+                 rec.style.top = ev.clientY - (dy - sy) + 'px';
+                 rec.style.left = ev.clientX - (dx - sx) + 'px';
+             }
+         }
+         rec.onmousedown = function(){
+             dx = event.clientX;
+             dy = event.clientY;
+             sx = parseInt(rec.style.left);
+             sy = parseInt(rec.style.top);
+             if (!down) {
+                 down  = true;
+             }
+         }
+         document.onmouseup = function(){
+             if (down) {
+                 down = false;
+             }
+         }
+     }
+     function dragging() {
+         var rec = document.getElementById("dragging");
+         var down = true;
+         var dx = 0;
+         var dy = 0;
+         var sx = 0;
+         var sy = 0;
+         document.onmousemove = function(e){
+             if (down) {
+                 var ev = e || event;
+                 rec.style.top = ev.clientY - (dy - sy) + 'px';
+                 rec.style.left = ev.clientX - (dx - sx) + 'px';
+             }
+         }
+         rec.onmousedown = function(){
+             dx = event.clientX;
+             dy = event.clientY;
+             sx = parseInt(rec.style.left);
+             sy = parseInt(rec.style.top);
+             if (!down) {
+                 down  = true;
+             }
+         }
+         document.onmouseup = function(){
+             if (down) {
+                 down = false;
+             }
+         }
+     }
+     function iframeClick() {
+         $('#test').addClass('animation',1000);
+     }
+   </script>
+   <div id="disp">
+       <button onclick="iframeClick()">点我</button>
+       <iframe src="www.baidu.com" id="test">
+           我是可以拖动的DOM
+       </iframe>
+   </div>
+   <style type="text/css">
+       .box {
+           position: relative;
+           width: 100%;
+           height: 200px;
+           text-align: center;
+           color: #fff;
+           background-color: #27ae60;
+       }
+       .box:after {
+           position: absolute;
+           left: 0;
+           right: 0;
+           bottom: -100px;
+           z-index: -1;
+           content: ' ';
+           height: 200px;
+           width: 100%;
+           border-radius: 0 0 50% 50%;
+           background-color: #27ae60;
+       }
+   </style>
+   <div class='box'>hello world</div>
+</body>
+</html>
