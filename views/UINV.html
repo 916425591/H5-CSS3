@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/uinv.util.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>
+<script>
+  // window.onload = function (ev) {
+  //   if (IsPC()) {//true
+  //     window.location.href = "http://www.baidu.com"
+  //   }
+  // }
+  //
+  // function IsPC() {
+  //   var userAgentInfo = navigator.userAgent;
+  //   var Agents = ["Android", "iPhone",
+  //     "SymbianOS", "Windows Phone",
+  //     "iPad", "iPod"];
+  //   var flag = true;
+  //   for (var v = 0; v < Agents.length; v++) {
+  //     if (userAgentInfo.indexOf(Agents[v]) > 0) {
+  //       flag = false;
+  //       break;
+  //     }
+  //   }
+  //   return flag;
+  // }
+
+  const tree = {
+    name: 'test1',
+    children:{
+      campus:{
+        children: {
+          slc: {
+            children: {
+              '生产楼三层': {
+                children: {
+
+                }
+              },
+              '生产楼二层': {
+                children: {
+
+                }
+              },
+              '生产楼一层': {
+                children: {
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  function aa(name, tree) {
+    if(!tree){ return }
+    if (tree['name'] == name) {
+      return tree['name'].children
+    } else {
+      aa(name, tree.children)
+    }
+  }
+  console.log(aa('test3',tree))
+</script>

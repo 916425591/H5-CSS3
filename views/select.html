@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<h2>Cars Select</h2>
+<div class="chzn-select-dz">
+    <div class="node"><span>123123</span><i></i></div>
+    <ul name="cars">
+        <li value="volvo">Volvo</li>
+        <li value="saab">Saab</li>
+        <li value="opel" selected>Opel</li>
+        <li value="audi">Audi</li>
+    </ul>
+</div>
+
+
+<script>
+  $('.chzn-select-dz .node').click(function () {
+    if($(this).next().css('left') == '-9999px'){
+      $(this).parent().find('i').addClass('pitch-i-attr');
+      $(this).next().css({left:'0px'})
+    }else {
+      $(this).parent().find('i').removeClass('pitch-i-attr');
+      $(this).next().css({left:'-9999px'})
+    }
+  })
+
+  $('.chzn-select-dz ul li').click(function () {
+    var text = $(this).text();
+    $(this).parent().parent().attr('setCompare',text);
+    $(this).parent().prev().find('span').text(text);
+    $(this).parent().prev().find('i').removeClass('pitch-i-attr');
+    $(this).parent().css({left:'-9999px'})
+  })
+</script>
+</body>
+<style>
+    body {
+        font-size: 20px;
+        color: #090;
+        background-color: #eee;
+        text-align: center;
+        position: relative;
+    }
+
+    .chzn-select-dz .node {
+        width: 100%;
+        height: 30px;
+        position: absolute;
+        left: 0px;
+        border: 1px solid #aaa;
+        background: #fff;
+        border-radius: 2px;
+    }
+
+    .chzn-select-dz .node i {
+        position: absolute;
+        z-index: 11;
+        width: 0px;
+        height: 0px;
+        border: 5px solid transparent;
+        border-top-color: #3e3b3b;
+        top: 13px;
+        right: 9px;
+        cursor: pointer;
+    }
+
+    .pitch-i-attr {
+        top: 8px !important;
+        transform: rotate(180deg);
+    }
+
+    .chzn-select-dz {
+        display: inline-block;
+        width: 300px;
+        position: relative;
+        /*overflow: hidden;*/
+        height: 30px;
+    }
+
+    .chzn-select-dz ul{
+        position: absolute;
+        top: 36px;
+        background: #fff;
+        width: 100%;
+        margin: 0px;
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        left: -9999px;
+    }
+    .chzn-select-dz ul li{
+        padding: 3px 0px;
+        width: 100%;
+    }
+    .chzn-select-dz ul li:hover{
+        background: #dddddd;
+        cursor: pointer;
+    }
+</style>
+</html>

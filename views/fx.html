@@ -1,16 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="author" content="Script Tutorials" />
+    <meta charset="utf-8"/>
+    <meta name="author" content="Script Tutorials"/>
     <title>昼夜交替</title>
-    <script src="../js/jquery-3.1.1.min.js"></script>
+    <!--<script src="../js/jquery-3.1.1.min.js"></script>-->
 </head>
 <body>
 <div class="apollp">
 
 </div>
+<script>
+  getDefectList = function (id) {
+    let data = {
+      id: id
+    }
+    return newAjax1('POST', '../json/aMG3mlON5sn9nIK929cUycqOTWJ2dDEMHVZc3wividEbLtnUJR.json', {id:1});
+    // return uinv.util.ajax({
+    //   url: uinv.mmdb2Source + 'alarm/getHealthDegreeById',
+    //   data: id,
+    //   async: async
+    // });
+  };
+  getDefectList().then(function (value) {
+    const value1 =JSON.parse(value)
+    console.log(value.indexOf(156));
+    console.log(value1)
+  });
 
+
+  function newAjax1(method, url, data) {
+    var request = new XMLHttpRequest();
+    var newData =  new Promise(function (resolve, reject) {
+      request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+          if (request.status === 200) {
+            resolve(request.responseText);
+          } else {
+            reject(request.status);
+          }
+        }
+      };
+      request.open(method, url,true);
+      request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      request.send(JSON.stringify({
+        num1:123,num2:456
+      }));
+    });
+    return newData;
+  }
+
+  // uinv.server.manager.operation.getMaintenanceSingle = function (id) {
+  //   var url = '/tarsier-vmdb/dcvWeb/dcv/http/rest/jxd'
+  //   var data=id
+  //   return uinv.newAjax('POST', url,data);
+  // };
+</script>
 </body>
 </html>
+
+
 

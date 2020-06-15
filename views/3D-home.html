@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3Dhome快捷导航</title>
+    <script src="../auth/transfer/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="head">
+        <div style="width: 1100px;margin: auto;">
+            <img src="../auth/transfer/images/banner_left.png">
+            <div class="user-name"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-left">
+
+        </div>
+        <div class="content-contre">
+
+        </div>
+        <div class="content-right">
+
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    body{
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    ul{
+        padding: 0px;
+        margin: 0px;
+        float: left;
+    }
+    li{
+        list-style: none;
+        line-height: 28px;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+    h3{
+        text-align: center;
+    }
+    h3 span{
+        padding: 10px 0px;
+        color: #fff;
+        width: 274px;
+        display: inline-block;
+    }
+    .head {
+        height: 360px;
+        width: 100%;
+        background: url("../auth/transfer/images/banner_background.png");
+    }
+
+    .head img{
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+        margin-top: 17px;
+        margin-left: 30px;
+        float: left;
+    }
+    .user-name {
+        float: right;
+        display: inline-block;
+        text-align: center;
+        color: #ffffff;
+        width: 276px;
+        margin-top: 75px;
+    }
+    .user-name span{
+        display: inherit;
+        font-size: 36px;
+    }
+    .user-name a{
+        background-color: #d2322d;
+        padding: 9px 46px;
+        border: none;
+        font-size: 14px;
+        color: #ffffff;
+        border-color: #ac2925;
+        border-radius: 2px;
+    }
+    .content {
+        width: 1270px;
+        display: flex;
+        margin: 26px auto 39px;
+        font-size: 16px;
+    }
+
+    .content-left {
+        width: 30%;
+        float: left;
+        border: 1px solid #cccccc;
+        padding-bottom: 40px;
+        border-top:4px solid #d13d26 ;
+        padding: 0px 20px;
+        /*padding: 0px 3%;*/
+    }
+    .img-icon{
+        width: 96px;
+        margin: 0 auto;
+    }
+    .img-icon img{
+        width: 100%;
+    }
+    .content-contre{
+        width: 30%;
+        float: left;
+        margin-left: 3%;
+        border: 1px solid #cccccc;
+        padding-bottom: 40px;
+        border-top:4px solid #9cd391 ;
+        padding: 0px 20px;
+        /*padding: 0px 3%;*/
+    }
+    .content-right {
+        border: 1px solid #cccccc;
+        border-top:4px solid #00b3ff ;
+        width: 30%;
+        float: left;
+        margin-left: 3%;
+        padding: 0px 20px 20px 20px;
+    }
+    .content-left-ul{
+        width: 100%;
+        /*text-align: center;*/
+    }
+
+    .content-left-ul li{
+        padding-left: 74px;
+    }
+    .content-rigth-left-ul{
+        width: 50%;
+    }
+    .content-rigth-right-ul{
+        width: 50%;
+    }
+    a{
+        color: #000000;
+        text-decoration:none;
+    }
+    .icon-sam{
+        height: 16px;
+        width: 16px;
+        padding: 11px 7px 0px 0px;
+        display: inline-block;
+        position: relative;
+        top: 2px;
+    }
+</style>
+<script>
+  init();
+
+  function init() {
+    var leftArr = {
+      // icon:'../images/img_uDCV_a.png',
+      samIcon:'../auth/transfer/images/icon-red.png',
+      arr:[
+        {
+          url: '',
+          name: '数据中心可视化'
+        },
+        {
+          url: '',
+          name: '机房运维管理'
+        },
+        {
+          url: '',
+          name: '虚拟化管理'
+        },
+        {
+          url: '',
+          name: '视频会议管理'
+        },
+        {
+          url: '',
+          name: '安全感知平台'
+        }, {
+          url: '',
+          name: '其他'
+        }
+      ]
+    };
+    var centreObj = {
+      left:{
+        // icon:'../images/img_uITA_a.png',
+        samIcon:'../auth/transfer/images/icon-yellor.png',
+        arr:[
+          {
+            url: '',
+            name: '防火墙（服务器区）'
+          },
+          {
+            url: '',
+            name: '防毒墙（服务器区）'
+          },
+          {
+            url: '',
+            name: '应用防火墙（服务器区）'
+          },
+          {
+            url: '',
+            name: '入侵防御系统（服务器区）'
+          },
+          {
+            url: '',
+            name: '应用防火墙（服务器区）'
+          },
+          {
+            url: '',
+            name: '防火墙（终端上网区）'
+          },
+          {
+            url: '',
+            name: '防毒区（终端上网区）'
+          },
+          {
+            url: '',
+            name: '上网行为管理（终端上网区）'
+          }
+        ]
+      },
+      right:{
+        // icon:'../images/img_uITA_a.png',
+        samIcon:'../auth/transfer/images/icon-yellor.png',
+        arr:[
+          {
+            url: '',
+            name: '安全运维审计'
+          },
+          {
+            url: '',
+            name: '安全探针'
+          },
+          {
+            url: '',
+            name: '主机监控与审计系统'
+          },
+          {
+            url: '',
+            name: '数据库审计'
+          },
+          {
+            url: '',
+            name: '日志审计'
+          },
+          {
+            url: '',
+            name: '抗拒绝服务系统'
+          },
+          {
+            url: '',
+            name: '杀毒软件管理'
+          },
+          {
+            url: '',
+            name: '其他'
+          }
+        ]
+      }
+    }
+
+    var rightObj = {
+      left:{
+        // icon:'../images/img_uITA_a.png',
+        samIcon:'../auth/transfer/images/icon-blor.png',
+        arr:[
+          {
+            url: 'index.html',
+            name: 'CA统一认证'
+          },
+          {
+            url: '',
+            name: '安全运维审计（服务器区）'
+          },
+          {
+            url: '',
+            name: '应用防火墙（服务器区）'
+          },
+          {
+            url: '',
+            name: '防毒墙（服务区）'
+          },
+          {
+            url: '',
+            name: '数据库审计（服务器区）'
+          },
+          {
+            url: '',
+            name: '入侵检测（服务器区）'
+          },
+          {
+            url: '',
+            name: '日志审计（服务器区）'
+          },
+          {
+            url: '',
+            name: '杀毒软件管理（服务器区）'
+          }
+        ]
+      },
+      right:{
+        // icon:'../images/img_uITA_a.png',
+        samIcon:'../auth/transfer/images/icon-blor.png',
+        arr:[
+          {
+            url: '',
+            name: '商密VPN（办公点接入区）'
+          },
+          {
+            url: '',
+            name: '入侵防御系统（办公点接入区）'
+          },
+          {
+            url: '',
+            name: '防火墙（办公点接入区）'
+          },
+          {
+            url: '',
+            name: '入侵防御系统（终端接入区）'
+          },
+          {
+            url: '',
+            name: '防火墙（终端接入区）'
+          },
+          {
+            url: '',
+            name: '其他'
+          }
+        ]
+      }
+    }
+    var leftHtml = '<h3><span style="background: #cf4d2e;">机房综合管理平台</span></h3>';
+    var centreHtml = '<h3><span style="background: #9cd391;">电子政务外网网络安全平台</span></h3>';
+    var rightHtml = '<h3><span style="background: #00b3ff;">网络安全平台</span></h3>';
+    // var userHtml ='<span>admin</span><span><a href="3D-home.html">注销</a></span>'
+    if (leftArr && leftArr.arr.length > 0) {
+      // leftHtml+='<div class="img-icon"><img src="'+leftArr.icon+'"></div>';
+      leftHtml += '<ul class="content-left-ul">'
+      for (var i =0;i< leftArr.arr.length; i++) {
+        leftHtml += '<li><img class="icon-sam" src="'+leftArr.samIcon+'"><a href="'+leftArr.arr[i].url+'">' + leftArr.arr[i].name + '</a></li>'
+      }
+      leftHtml += '</ul>'
+    }
+    if (rightObj) {
+      // rightHtml +='<div class="img-icon"><img src="'+ rightObj['left']['icon']+'"></div>'
+      for (var cur in rightObj) {
+        if (rightObj[cur] && rightObj[cur].arr.length>0) {
+          if (cur == 'left') {
+            rightHtml += '<ul class="content-rigth-left-ul">'
+          } else {
+            rightHtml += '<ul class="content-rigth-right-ul">'
+          }
+          for (var i =0;i< rightObj[cur]['arr'].length; i++) {
+            rightHtml += '<li><img class="icon-sam" src="'+rightObj[cur].samIcon+'"><a href="'+rightObj[cur]['arr'][i].url+'">' + rightObj[cur]['arr'][i].name + '</a></li>'
+          }
+          rightHtml += '</ul>'
+        }
+      }
+    }
+
+    if (centreObj) {
+      // rightHtml +='<div class="img-icon"><img src="'+ rightObj['left']['icon']+'"></div>'
+      for (var cur in centreObj) {
+        if (centreObj[cur] && centreObj[cur].arr.length>0) {
+          if (cur == 'left') {
+            centreHtml += '<ul class="content-rigth-left-ul">'
+          } else {
+            centreHtml += '<ul class="content-rigth-right-ul">'
+          }
+          for (var i =0;i< centreObj[cur]['arr'].length; i++) {
+            centreHtml += '<li><img class="icon-sam" src="'+centreObj[cur].samIcon+'"><a href="'+centreObj[cur]['arr'][i].url+'">' + centreObj[cur]['arr'][i].name + '</a></li>'
+          }
+          centreHtml += '</ul>'
+        }
+      }
+    }
+
+    $('.content-left').html(leftHtml);
+    $('.content-contre').html(centreHtml);
+    $('.content-right').html(rightHtml);
+
+
+    // $('.user-name').html(userHtml)
+  }
+</script>
+</body>
+</html>

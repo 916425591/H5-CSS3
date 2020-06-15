@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/echarts.min.js"></script>
+</head>
+<body>
+<div id="initEcharts" style="width: 1100px;height: 960px">
+
+</div>
+<script>
+  var jsonStr = {
+    all: [120, 280, 270, 260, 280, 280, 180, 70, 120, 120, 60, 70, 26, 46, 46, 46],//总容量 - 已经使用
+    alreadyUsed: "已使用",
+    area: "房间",
+    areaNum: "1F主机房",
+    capacity: "容量(T)",
+    combined: "合并柱状图",
+    countType: "容量数据统计",
+    expanded: "展开柱形图",
+    group: "组",
+    histogram: "柱状图",
+    percentage: "百分比",
+    totalCapacity: "总容量",
+    used:["180", "20", "30", "40", "20", "120", "230", "320", "0", "0", "0", "0", "0", "0", "0", "0"],
+    xAxis: ["A1", "B1", "B2", "C1", "D1", "D2", "E1", "E2", "F1", "F2", "K1", "K2", "L1", "L2", "M1", "M2"],
+    yAxisName: "容量(U)"
+  };
+  var zoomSize = 6;
+  var options = {
+    'title':{
+      textStyle:{fontFamily: '微软雅黑',color: "#000",fontSize:12,fontWeight:"normal"},
+      text:jsonStr.yAxisName,
+      x: 10,
+      y: -3,
+    },
+    'legend': {
+      x: 100,
+      y: -5,
+    },
+    'tooltip': {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'cross'
+      },
+      formatter:function(params){
+       var res =params[0].axisValue + '</br>';
+       var all =null; //总容量
+       var used =null ;//已经使用
+        for (var i = 0; i < params.length; i++) {
+           if(params[i].seriesName == '已使用'){
+             all = params[i].data;
+           }else if(params[i].seriesName == '总容量'){
+             used = params[i].data
+           }
+        };
+        all = Number(all)+Number(used)
+        res += '&nbsp;&nbsp;总容量 : ' + all + '</br>'
+        res += '&nbsp;&nbsp;已使用 : ' + used + '</br>'
+        return res;
+      },
+      position: function (pos, params, el, elRect, size) {
+        var obj = {
+          top: pos[1] - 50,
+          left:pos[0]
+        };
+        return obj;
+      },
+      textStyle : {
+        color: '#fff',
+        decoration: 'none',
+        fontFamily: '微软雅黑',
+        fontSize: 12,
+      }
+    },
+    'dataset': {
+      'source': [
+        ['product', jsonStr.totalCapacity, jsonStr.alreadyUsed]
+      ]
+    },
+    'xAxis': {
+      type: 'category',
+      axisLabel:{
+        interval: 0,
+        rotate: 0,
+        textStyle: {
+          color: '#000',
+          fontSize: "10"
+        },
+        formatter: function (value) {
+          var maxlength=12;
+          if (value.length>maxlength) {
+            return value.substring(0, maxlength-1)+'...';
+          } else{
+            return value;
+          };
+        }
+      },
+      // data : [" 马坡 MG ", " 马坡 MH ", " 马坡 MI "," 马坡 MF ", " 马坡 MS ", " 马坡 MIE "]
+      data : jsonStr.xAxis
+    },
+    'yAxis': {
+      name:'',//jsonStr.yAxisName,
+      splitNumber: 4,
+      axisLabel:{
+        interval: 0,
+        rotate: 0,
+        textStyle: {
+          color: '#000',
+          fontSize: "10"
+        }
+      },
+      boundaryGap:true
+    },
+    'dataZoom': [
+      {   // 这个dataZoom组件，默认控制x轴。
+        type: 'inside' // 这个 dataZoom 组件是 slider 型 dataZoom 组件
+      }
+    ],
+    'grid': {//整个canvas 位置及尺寸
+      x:50,
+      y:30,
+      x2:30,
+      y2:30,
+      //height:70
+    },
+    // Declare several bar series, each will be mapped
+    // to a column of dataset.source by default.
+    'series': [
+      //更改位置 可以把需要的颜色放上面来 更改位置 可以把需要的颜色放上面来 更改位置 可以把需要的颜色放上面来 更改位置 可以把需要的颜色放上面来
+      {
+        name:jsonStr.alreadyUsed, //已使用
+        type:'bar',
+        stack: 'bank',
+        itemStyle: {normal: {color:'rgba(253,146,76,1)', label:{show:false,textStyle:{color:'#E87C25'}}}},
+        data: jsonStr.used
+        // data: [" 1150 ", " 6500 ", " 8510 "," 1250 ", " 3500 ", " 5510 "]
+      },
+      {
+        name:jsonStr.totalCapacity, //总容量
+        type:'bar',
+        stack: 'bank',
+        itemStyle: {normal: {color:'rgba(79,157,255,0.5)', label:{show:false,formatter:function(p){return p.value > 0 ? (p.value):'';}}}},
+        // data: [8694, 7392, 7224, 6500, 7500, 6540]
+        data: jsonStr.all
+      }
+    ]
+  };
+  var dom = document.getElementById("initEcharts");
+  var pieChart = echarts.init(dom);
+  if (options && typeof options === "object") {
+    pieChart.hideLoading();
+    pieChart.setOption(options);
+    pieChart.on('click', function (params) {
+      pieChart.dispatchAction({
+        type: 'dataZoom',
+        startValue: Math.max(params.dataIndex - zoomSize / 2, 0),
+        endValue: Math.min(params.dataIndex + zoomSize / 2, options.dataset.source.length - 1)
+      });
+    });
+  }
+</script>
+</body>
+</html>

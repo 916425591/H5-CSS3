@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iframe</title>
+</head>
+<body>
+<div style="width: 1000px;height: 750px">
+<iframe id="armchatroom" src="http://119.23.143.36:8086/tarsier-vmdb/dcvWeb/dcv/home.html?ID=7T9B6RZ500" width="1000px" height="500px"> </iframe>
+</div>
+<script>
+    setTimeout(()=>{
+      document.getElementById('armchatroom').contentWindow.location.reload(true);
+    },3000)
+</script>
+</body>
+</html>

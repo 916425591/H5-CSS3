@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="ellipse">
+<div class="top"></div>
+    <el class="left"></el>
+    <el  class="right"></el>
+</div>
+</body>
+<style>
+    .ellipse{
+        margin-left: 100px;
+        width:100px;
+        height:100px;
+        /*border:solid 0.5px black;*/
+        transform: rotateX(70deg);
+    }
+    .left{
+        height: 148px;
+        width: 1px;
+        position: absolute;
+        top: 42px;
+        left: 0px;
+        background: #000;
+    }
+    .right{
+        height: 148px;
+        width: 1px;
+        position: absolute;
+        top: 42px;
+        right: -2px;
+        background: #000;
+    }
+    .top{
+        position: absolute;
+        top: -10px;
+        z-index: 1;
+        width:100px;
+        height:100px;
+        /*border:solid 0.5px black;*/
+        background: #d8f0d8;
+        border-radius: 50px;
+        border-top:#000  1px solid;
+        border-right:#000  1px solid;
+        border-left:#000  1px solid;
+        border-bottom:#000  2px solid;
+        opacity: 0.6;
+    }
+    .ellipse:after{
+        content: '';
+        display:inline-block;
+        width:100px;
+        height: 240px;
+        position:relative;
+        background: #00b858;
+        top:28%;
+        border-left:black 0.5px solid;
+        border-right:black 0.5px solid;
+        border-bottom: black 2px solid;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    /*渐变*/
+    .ellipse:before{
+        content: '';
+        display:inline-block;
+        width:100px;
+        height: 100px;
+        position:relative;
+        background: #00b858 ;
+        top:78%;
+        z-index: 1;
+        left:1px;
+        border-top:#38ec8d  12px solid;
+        border-bottom:#000  2px solid;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+</style>
+</html>
