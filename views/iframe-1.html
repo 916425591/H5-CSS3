@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<script>
+  /**
+   *
+   * @param url  链接
+   * @param w iframe 宽度
+   * @param h iframe 高度
+   * @param w1 关闭 宽度
+   * @param h1 关闭 高度
+   */
+  function showIframe(url,w,h,w1,h1){
+//添加iframe
+    var if_w = w;
+    var if_h = h;
+    $("<iframe name='fanlaosIframe' src='"+url+"' width='" + if_w + "px' height='" + if_h + "px' id=‘iFrame' name='iFrame' style='background: #cccccc;top: 50%;margin-left: -"+if_w/2+"px;left: 50%;margin-top: -"+if_h/2+"px;position:absolute;z-index:4;' frameborder='no' marginheight='0' marginwidth='0' allowTransparency='true'></iframe>").prependTo('body');
+//iframe屏幕适应宽高设置
+    var st=document.documentElement.scrollTop|| document.body.scrollTop;//滚动条距顶部的距离
+    var sl=document.documentElement.scrollLeft|| document.body.scrollLeft;//滚动条距左边的距离
+    var ch=document.documentElement.clientHeight;//屏幕的高度
+    var cw=document.documentElement.clientWidth;//屏幕的宽度
+    $("body").append('<div id="hideIframe" style="line-height: '+h1+'px;    background: #987d7d;color: #fff;    text-align: center; cursor: pointer; font-size: 12px; height: '+h1+'px;width: '+w1+'px;top: 50%; z-index: 5;position: absolute;margin-top: -'+if_h/2+'px;left: 50%;margin-left: '+(if_w/2-w1)+'px">关闭</div>')
+    var objH=$("#iFrame").height();//浮动对象的高度
+    var objW=$("#iFrame").width();//浮动对象的宽度
+    var objT=Number(st)+(Number(ch)-Number(objH))/2;
+    var objL=Number(sl)+(Number(cw)-Number(objW))/2;
+    $('#hideIframe').click(function () {
+      document.getElementsByName('fanlaosIframe')[0].remove();
+      document.getElementById('hideIframe').remove()
+    })
+  }
+  showIframe('https://www.baidu.com/','650','350','30','20');
+</script>
+</body>
+</html>
