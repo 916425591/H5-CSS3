@@ -26,10 +26,6 @@
     var ch=document.documentElement.clientHeight;//屏幕的高度
     var cw=document.documentElement.clientWidth;//屏幕的宽度
     $("body").append('<div id="hideIframe" style="line-height: '+h1+'px;    background: #987d7d;color: #fff;    text-align: center; cursor: pointer; font-size: 12px; height: '+h1+'px;width: '+w1+'px;top: 50%; z-index: 5;position: absolute;margin-top: -'+if_h/2+'px;left: 50%;margin-left: '+(if_w/2-w1)+'px">关闭</div>')
-    var objH=$("#iFrame").height();//浮动对象的高度
-    var objW=$("#iFrame").width();//浮动对象的宽度
-    var objT=Number(st)+(Number(ch)-Number(objH))/2;
-    var objL=Number(sl)+(Number(cw)-Number(objW))/2;
     $('#hideIframe').click(function () {
       document.getElementsByName('fanlaosIframe')[0].remove();
       document.getElementById('hideIframe').remove()

@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7117c569-5c86-4f03-9aa6-073769f100db" name="默认的" comment="默认的">
-      <change afterPath="$PROJECT_DIR$/js/FileSaver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/FileSaver.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/iframe-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/echarts.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/echarts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/iframe-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/iframe-1.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/iframe-1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+            <state relative-caret-position="150">
+              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#iframe#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -374,7 +370,7 @@
       <workItem from="1592379519004" duration="2466000" />
       <workItem from="1592444768469" duration="2457000" />
       <workItem from="1593659694993" duration="4762000" />
-      <workItem from="1594122431277" duration="2355000" />
+      <workItem from="1594122431277" duration="3138000" />
     </task>
     <task id="LOCAL-00001" summary="初始化布局">
       <created>1525750447738</created>
@@ -397,11 +393,18 @@
       <option name="project" value="LOCAL" />
       <updated>1592208436236</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="默认的">
+      <created>1594124856640</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594124856640</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303732000" />
+    <option name="totallyTimeSpent" value="304515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -783,8 +786,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/iframe-1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+        <state relative-caret-position="150">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#iframe#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
