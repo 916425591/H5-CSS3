@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<canvas id="aa" width="1111"height="1111"></canvas>
+<script>
+  var aa = document.getElementById('aa');
+  var bb = aa.getContext('2d');
+
+  bb.fillStyle = '#99f';    //   填充颜色
+  bb.fillRect(0,0,1000,1000);
+
+  var img = new Image;
+  img.src = '../images/banner_left.png';
+
+  bb.fillStyle = '#fff';   // 文字填充颜色
+  bb.font = '33px Adobe Ming Std';
+  bb.fillText('怎么得到你想要的?',300,400);
+
+  bb.fillStyle = '#fff';
+  bb.font = '66px Adobe Ming Std';
+  bb.fillText('让自己配得上!',390,200);
+
+  bb.stroke();
+  img.onload = function () {
+    bb.drawImage(img, 200,200);
+  }
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+<canvas id="myCanvas" width="300" height="300" style="background-size:100% 100%;">
+    您的浏览器不支持 HTML5 canvas 标签。
+</canvas>
+<script>
+
+  async function drawImg(ctx, params) {
+        return new Promise((resolve, reject) => {
+          if(params.type ==='img'){
+              const imgObj = new Image();
+              imgObj.src = params.src
+              imgObj.onload = () => {
+                ctx.drawImage(imgObj, params.left || 0, params.top || 0, params.width || 300, params.height || 300);
+                resolve()
+              }
+          }else{
+              ctx.fillStyle = params.fillStyle || '#ffffff';  //设置填充的背景颜色
+              ctx.strokeStyle = params.strokeStyle || '#000000'; //设置笔触的颜色
+              ctx.font = params.font || "bold 40px '字体','字体','微软雅黑','宋体'"; //设置字体
+              ctx.textBaseline = params.textBaseline || 'hanging'; //在绘制文本时使用的当前文本基线
+              ctx.textAlign = 'center';//居中
+              ctx.fillText(params.content || 'test', params.left, params.top); //设置文本内容
+      resolve()
+         }
+
+      })
+  }
+
+  async function initCanvas() {
+        const img1 = '../images/dusk.jpg';
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext('2d');
+        await drawImg(ctx, {
+          type: 'img',//type为img表示加入图片
+          src: img1,//图片地址
+          top: 0,//距离y轴距离
+          left: 0,//距离x轴距离
+          width: 300,//图片宽
+          height: 300//图片高
+        })
+
+
+        await drawImg(ctx, {
+          type: 'text', // type为text表示加入文本
+          content: '勤勤学长111111111111',//文本内容
+          left: 150,//为canvas一半时居中，此为距离x轴距离
+          top: 240//距离y轴距离
+        })
+
+        await drawImg(ctx, {
+          type: 'text', // type为text表示加入文本
+          content: '勤勤学长1',//文本内容
+          left: 150,//为canvas一半时居中，此为距离x轴距离
+          top: 140//距离y轴距离
+        })
+  }
+  initCanvas();
+</script>
+
+</body>
+
+</html>

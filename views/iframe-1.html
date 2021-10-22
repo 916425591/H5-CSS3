@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/open-t3d-page.js"></script>
 </head>
 <body>
+<style>
+    #hideIframe {
+        background: #000000;
+    }
+</style>
 <script>
   /**
    *
@@ -15,23 +21,50 @@
    * @param w1 关闭 宽度
    * @param h1 关闭 高度
    */
-  function showIframe(url,w,h,w1,h1){
+  function showIframe(url) {
 //添加iframe
-    var if_w = w;
-    var if_h = h;
-    $("<iframe name='fanlaosIframe' src='"+url+"' width='" + if_w + "px' height='" + if_h + "px' id=‘iFrame' name='iFrame' style='background: #cccccc;top: 50%;margin-left: -"+if_w/2+"px;left: 50%;margin-top: -"+if_h/2+"px;position:absolute;z-index:4;' frameborder='no' marginheight='0' marginwidth='0' allowTransparency='true'></iframe>").prependTo('body');
+    var if_w = 650;
+    var if_h = 350;
+    var w1 = 30;
+    var h1 = 20;
+    $("<iframe name='fanlaosIframe' src='" + url + "' width='" + if_w + "px' height='" + if_h + "px' id=‘iFrame' name='iFrame' style='background: #cccccc;top: 50%;margin-left: -" + if_w / 2 + "px;left: 50%;margin-top: -" + if_h / 2 + "px;position:absolute;z-index:4;' frameborder='no' marginheight='0' marginwidth='0' allowTransparency='true'></iframe>").prependTo('body');
 //iframe屏幕适应宽高设置
-    var st=document.documentElement.scrollTop|| document.body.scrollTop;//滚动条距顶部的距离
-    var sl=document.documentElement.scrollLeft|| document.body.scrollLeft;//滚动条距左边的距离
-    var ch=document.documentElement.clientHeight;//屏幕的高度
-    var cw=document.documentElement.clientWidth;//屏幕的宽度
-    $("body").append('<div id="hideIframe" style="line-height: '+h1+'px;    background: #987d7d;color: #fff;    text-align: center; cursor: pointer; font-size: 12px; height: '+h1+'px;width: '+w1+'px;top: 50%; z-index: 5;position: absolute;margin-top: -'+if_h/2+'px;left: 50%;margin-left: '+(if_w/2-w1)+'px">关闭</div>')
+    var st = document.documentElement.scrollTop || document.body.scrollTop;//滚动条距顶部的距离
+    var sl = document.documentElement.scrollLeft || document.body.scrollLeft;//滚动条距左边的距离
+    var ch = document.documentElement.clientHeight;//屏幕的高度
+    var cw = document.documentElement.clientWidth;//屏幕的宽度
+    $("body").append('<div id="hideIframe" style="line-height: ' + h1 + 'px;    background: #000000;color: #fff;    text-align: center; cursor: pointer; font-size: 12px;padding: 3px 10px; height: ' + h1 + 'px;width: ' + w1 + 'px;top: 50%; z-index: 5;position: absolute;margin-top: -' + (if_h / 2 - 10) + 'px;left: 50%;margin-left: ' + (if_w / 2 - w1 - 30) + 'px">关闭</div>')
     $('#hideIframe').click(function () {
       document.getElementsByName('fanlaosIframe')[0].remove();
       document.getElementById('hideIframe').remove()
     })
   }
-  showIframe('https://www.baidu.com/','650','350','30','20');
+
+  uinv.u3d.funcSet.showIframe = function (scId) {
+    return uinv.invokeMethodInBrowser('uinv.u3d.funcSet.showIframe', [scId], function (scId) {
+      var url = uinv.util.getIp() + '/dcvWeb/dcv/home.html?ID=' + scId + '&isUseWebgl=true';
+      //OpenT3DPage.OpenT3DURL(url,"_blank");
+      //添加iframe
+      var if_w = 650;
+      var if_h = 350;
+      var w1 = 30;
+      var h1 = 20;
+      $("<iframe name='fanlaosIframe' src='" + url + "' width='" + if_w + "px' height='" + if_h + "px' id=‘iFrame' name='iFrame' style='background: #cccccc;top: 50%;margin-left: -" + if_w / 2 + "px;left: 50%;margin-top: -" + if_h / 2 + "px;position:absolute;z-index:4;' frameborder='no' marginheight='0' marginwidth='0' allowTransparency='true'></iframe>").prependTo('body');
+//iframe屏幕适应宽高设置
+      var st = document.documentElement.scrollTop || document.body.scrollTop;//滚动条距顶部的距离
+      var sl = document.documentElement.scrollLeft || document.body.scrollLeft;//滚动条距左边的距离
+      var ch = document.documentElement.clientHeight;//屏幕的高度
+      var cw = document.documentElement.clientWidth;//屏幕的宽度
+      $("body").append('<div id="hideIframe" style="line-height: ' + h1 + 'px;    background: #000000;color: #fff;    text-align: center; cursor: pointer; font-size: 12px;padding: 3px 10px; height: ' + h1 + 'px;width: ' + w1 + 'px;top: 50%; z-index: 5;position: absolute;margin-top: -' + (if_h / 2 - 10) + 'px;left: 50%;margin-left: ' + (if_w / 2 - w1 - 30) + 'px">关闭</div>')
+      $('#hideIframe').click(function () {
+        document.getElementsByName('fanlaosIframe')[0].remove();
+        document.getElementById('hideIframe').remove()
+      })
+
+    });
+  };
+
+  showIframe('https://www./', '650');
 </script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <div id="modalCamera" class="modal-block modal-block-md mfp-hide ">
+        <section class="panel">
+            <header class="panel-heading">
+                <h2 class="panel-title">视频实时监控</h2>
+                <div class="panel-actions">
+                    <button class="btn btn-xs btn-default modal-dismiss">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </header>
+            <div class="panel-body">
+                @*摄像头窗口*@
+                <div id="cameraVideos" class="camera-plugin">
+                </div>
+            </div>
+        </section>
+    </div>
+</head>
+<body>
+<script>
+  $('#cameraVideos').empty();
+  $object="<object type='application/x-vlc-plugin' pluginspage='http://www.videolan.org/' id='vlc' events='false' width='560' height='410'>"+
+    "<param name='mrl' value='rtsp://admin:12345@192.168.0.104:554/MPEG-4/ch1/main/av_stream' />"+
+    "<param name='volume' value='50' />"+
+    "<param name='autoplay' value='true' />"+
+    "<param name='loop' value='false' />"+
+    "<param name='fullscreen' value='false' />"+
+    "<param name='controls' value='false' /></object>";
+  $('#cameraVideos').append($object);
+</script>
+</body>
+</html>

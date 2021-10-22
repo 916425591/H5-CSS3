@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div class="append"></div>
+<div class="insertHtml"></div>
+</body>
+<script>
+    var append = function () {
+      console.time('append')
+       for(var i=0; i< 4000;i++){
+           var str = '<div>\n' +
+             '       <span>我是</span>\n' +
+             '       <span>我是</span>\n' +
+             '       <button>我是</button>\n' +
+             '   </div>'
+         $('.append').append($(str))
+       }
+      console.timeEnd('append')
+    }
+
+    var insertHtml = function () {
+      console.time('insertHtml');
+      var str = ''
+      for(var i=0; i< 4000;i++){
+        str += '<div>\n' +
+          '       <span>我是</span>\n' +
+          '       <span>我是</span>\n' +
+          '       <button>我是</button>\n' +
+          '   </div>'
+      }
+      $('.insertHtml').html(str);
+      console.timeEnd('insertHtml')
+    }
+    append();
+    insertHtml();
+
+</script>
+</html>

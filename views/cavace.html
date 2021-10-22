@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas beginePath example</title>
+    <script>
+      function beginDemo() {
+        var canvas = document.getElementById("demo")
+        var ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.lineWidth = "3";
+        ctx.fontOutlineColour = [91 / 255, 210 / 255, 221 / 255];
+        ctx.font = "32px";
+        ctx.fillText("我是中文字", 120, 200);
+        ctx.stroke();
+      }
+    </script>
+</head>
+<body onload="beginDemo();">
+<canvas id="demo" width="800" height="800"></canvas>
+</body>
+</html>

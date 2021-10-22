@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        #close{
+          background: #000000;
+            color: #ffffff;
+            padding: 3px 6px;
+        }
+    </style>
+    <div class="aaaa">aaaaa</div>
+</head>
+<body>
+
+</body>
+<script>
+    $('.aaaa').click(function () {
+      showIframe();
+    });
+  showIframe = function (scId) {
+    var url = '/H5-CSS3/views/page.html'; //uinv.util.getIp() + '/dcvWeb/dcv/home.html?ID=' + scId;
+    //OpenT3DPage.OpenT3DURL(url,"_blank");
+    var bschitchat = window.open(
+      url,
+      "_blank",
+      "toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width='" + window.innerWidth + "', height='" + window.innerHeight + "'")
+    bschitchat.moveTo(100, 100)
+    bschitchat.resizeTo(screen.availWidth - 500, screen.availHeight - 500)
+    bschitchat.outerWidth = screen.availWidth
+    bschitchat.outerHeight = screen.availHeight;
+    setTimeout(function () {
+
+      var div = document.createElement("div");
+      var docElm = bschitchat.document.documentElement;
+      var docElm = document.documentElement;
+      //W3C
+      if (docElm.requestFullscreen) {
+        docElm.requestFullscreen();
+      }
+      //FireFox
+      else if (docElm.mozRequestFullScreen) {
+        docElm.mozRequestFullScreen();
+      }
+      //Chrome等
+      else if (docElm.webkitRequestFullScreen) {
+        docElm.webkitRequestFullScreen();
+      }
+      //IE11
+      else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      }
+      div.setAttribute("id", "close");
+      div.innerHTML = "关闭";
+      bschitchat.document.body.appendChild(div);
+      var closeDiv =  bschitchat.document.getElementById('close');
+      $(closeDiv).css({
+        background: '#000000',
+        color: '#ffffff',
+        padding: '3px 6px',
+        width: '67px',
+        textAlign: 'center',
+        borderRadius: '3px',
+        position: 'fixed',
+        top: '10px',
+        right: '10px'
+      })
+      $(closeDiv).click(function () {
+        bschitchat.close();
+      });
+    },500)
+  };
+</script>
+</html>
