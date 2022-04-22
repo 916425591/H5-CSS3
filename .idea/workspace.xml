@@ -4,7 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/views/3D-home.html" line="103" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7117c569-5c86-4f03-9aa6-073769f100db" name="默认的" comment="默认的" />
+    <list default="true" id="7117c569-5c86-4f03-9aa6-073769f100db" name="默认的" comment="默认的">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/iframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/iframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/two.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/two.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,6 +182,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -310,6 +320,8 @@
       <workItem from="1605172027905" duration="83000" />
       <workItem from="1606117294309" duration="991000" />
       <workItem from="1634896234807" duration="89000" />
+      <workItem from="1636948487340" duration="1223000" />
+      <workItem from="1650598833739" duration="108000" />
     </task>
     <task id="LOCAL-00001" summary="初始化布局">
       <created>1525750447738</created>
